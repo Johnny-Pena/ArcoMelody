@@ -7,7 +7,7 @@ import Index from './routes/index.jsx';
 import Bio from './routes/bio.jsx';
 import Contact from './routes/contact.jsx';
 import Lessons from './routes/lessons.jsx';
-import SignUp from './routes/signup.jsx';
+import SignUp from './routes/signUp.jsx';
 import StudioPolicy from './routes/studioPolicy.jsx';
 
 function App() {
