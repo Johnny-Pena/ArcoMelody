@@ -12,3 +12,7 @@ p {
     background-position: right;
   }
 }
+
+  .footer p {
+    @apply text-base;
+  }
