@@ -6,3 +6,9 @@
 p {
   @apply text-lg;
 }
+
+@media (max-width: 640px) {
+  .hero {
+    background-position: right;
+  }
+}
