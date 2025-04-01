@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import './index.css';
-import Navbar from './components/navbar.jsx';
-import Footer from './components/footer.jsx';
+import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
 import Index from './routes/index.jsx';
 import Bio from './routes/bio.jsx';
 import Contact from './routes/contact.jsx';
