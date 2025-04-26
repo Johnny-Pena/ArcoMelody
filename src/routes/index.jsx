@@ -2,15 +2,15 @@ import Hero from "../components/Hero";
 
 export const meta = () => {
   return [
-    { title: "Jenny Peña Violin" },
-    { name: "description", content: "Welcome to Jenny Peña Violin. Learn to play the violin with Jenny Peña, a professional violinist and experienced teacher. Join our lessons today!" },
-    { name: "keywords", content: "Jenny Peña, Jenny Pena, violin lessons, violin teacher, learn violin, professional violinist, music lessons" },
-    { property: "og:title", content: "Jenny Peña Violin" },
-    { property: "og:description", content: "Welcome to Jenny Peña Violin. Learn to play the violin with Jenny Peña, a professional violinist and experienced teacher. Join our lessons today!" },
+    { title: "Arco Melody" },
+    { name: "description", content: "Welcome to Arco Melody. Join our lessons today!" },
+    { name: "keywords", content: "Jenny Peña, Jenny Pena, violinist, violin teacher, Johnny Peña, Johnny Pena, guitarist, guitar teacher, professional violinist, professional guitarist, music achievements" },
+    { property: "og:title", content: "Arco Melody" },
+    { property: "og:description", content: "Learn about Arco Melody, a virtual violin and guitar studio based in Texas. Explore our collaborative teaching style and join us on a musical journey." },
     { property: "og:image", content: "/assets/images/Jenny-Website-Grey.png" },
-    { property: "og:url", content: "https://jennypenaviolin.com" },
+    { property: "og:url", content: "https://arcomelody.com" },
     { property: "og:type", content: "website" },
-    { rel: "canonical", href: "https://jennypenaviolin.com" }
+    { rel: "canonical", href: "https://arcomelody.com" }
   ];
 };
 
