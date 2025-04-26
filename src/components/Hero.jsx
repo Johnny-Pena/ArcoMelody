@@ -16,7 +16,7 @@ export default function Hero() {
         ></div>
       <div className="hero-content text-neutral-content text-right sm:text-left">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Learn violin from anywhere with virtual lessons.</h1>
+          <h1 className="mb-5 text-5xl font-bold">Learn how to play music from anywhere with virtual lessons.</h1>
           <Link to="/lessons" className="btn btn-primary">Learn More</Link>
         </div>
       </div>
