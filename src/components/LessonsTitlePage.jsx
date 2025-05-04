@@ -20,7 +20,7 @@ export default function LessonsTitlePage() {
       <div className="card-body">
         <h2 className="card-title text font-bold text-4xl text-left">Start or continue your musical journey today!</h2>
         <p>
-          We will help you achieve your musical goals whether you are playing your first notes or refining virtuostic techniques.
+          We will help you achieve your musical goals whether you are playing your first notes or refining virtuosic techniques.
         </p>
         <div className="card-actions justify-end">
           <Link to="/signUp">
