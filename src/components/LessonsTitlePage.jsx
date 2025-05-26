@@ -18,9 +18,12 @@ export default function LessonsTitlePage() {
         </div>
       </div>
       <div className="card-body">
-        <h2 className="card-title text font-bold text-4xl text-left">Start or continue your musical journey today!</h2>
+        <h2 className="card-title text font-bold text-2xl text-left sm:text-4xl">Start or continue your musical journey today!</h2>
         <p>
           We will help you achieve your musical goals whether you are playing your first notes or refining virtuosic techniques.
+        </p>  
+        <p>
+          Now enrolling violin, viola, and guitar students of all ages and skill levels for virtual lessons.
         </p>
         <div className="card-actions justify-end">
           <Link to="/signUp">
