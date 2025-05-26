@@ -9,11 +9,14 @@ import Contact from './routes/contact.jsx';
 import Lessons from './routes/lessons.jsx';
 import SignUp from './routes/signUp.jsx';
 import StudioPolicy from './routes/studioPolicy.jsx';
+import AnalyticsTracker from './components/AnalyticsTracker.jsx';
+
 
 function App() {
   return (
 <Router>
   <div>
+  <AnalyticsTracker />
     <Navbar />
     <Routes>
       <Route path="/" element={<Index />} />
