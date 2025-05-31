@@ -57,15 +57,15 @@ export default function Navbar() {
               <li role="menuitem"><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost text-xl flex items-center gap-2">
-          <img
-            src="/images/ArcoMelodyFavicon-32x32.svg"
-            alt="Arco Melody Logo"
-            className="w-7 h-7"
-            style={{ display: "inline-block" }}
-          />
-          Arco Melody
-        </Link>
+       <Link to="/" className="btn btn-ghost text-xl flex items-center">
+        <img
+          src="/images/ArcoMelodyFavicon-32x32.svg"
+          alt="Arco Melody Logo"
+          className="w-7 h-7"
+          style={{ display: "inline-block" }}
+        />
+        <span className="hidden sm:inline">Arco Melody</span>
+      </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-lg font-medium" role="menubar">
