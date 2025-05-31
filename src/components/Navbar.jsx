@@ -53,10 +53,19 @@ export default function Navbar() {
               <li role="menuitem"><Link to="/lessons">Lessons</Link></li>
               <li role="menuitem"><HashLink smooth to="/lessons#pricing-section">Pricing</HashLink></li>
               <li role="menuitem"><Link to="/bio">Bio</Link></li>
+              <li role="menuitem"><Link to="/core-values">Core Values</Link></li>
               <li role="menuitem"><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost text-xl">Arco Melody</Link>
+          <Link to="/" className="btn btn-ghost text-xl flex items-center gap-2">
+          <img
+            src="/images/ArcoMelodyFavicon-32x32.svg"
+            alt="Arco Melody Logo"
+            className="w-7 h-7"
+            style={{ display: "inline-block" }}
+          />
+          Arco Melody
+        </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-lg font-medium" role="menubar">
@@ -64,6 +73,7 @@ export default function Navbar() {
             <li role="menuitem"><Link to="/lessons">Lessons</Link></li>
             <li role="menuitem"><HashLink smooth to="/lessons#pricing-section">Pricing</HashLink></li>
             <li role="menuitem"><Link to="/bio">Bio</Link></li>
+            <li role="menuitem"><Link to="/core-values">Core Values</Link></li>
             <li role="menuitem"><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
