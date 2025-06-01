@@ -16,7 +16,7 @@ export const meta = () => {
 
 export default function CoreValues() {
   return (
-    <div className="flex flex-col items-center justify-start bg-base-200 min-h-screen pt-8">
+    <div className="flex flex-col items-center justify-start bg-base-200 min-h-screen pt-8 px-4 w-full">
       <h1 className="text-5xl font-bold mt-16 mb-8">Our Core Values</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full max-w-5xl justify-items-center">
         <CoreValuesCard />

@@ -6,8 +6,8 @@ export default function ContactForm() {
     return <p>Thanks for contacting us! We will reach out to you soon!</p>;
   }
   return (
-    <div className="flex items-center justify-center bg-base-200" style={{ height: '80vh' }}>
-      <div className="card bg-base-100 w-96 p-6 rounded-lg shadow-md">
+    <div className="w-full flex flex-col bg-base-200 pt-4 pb-8">
+      <div className="card bg-base-100 w-full max-w-md p-6 rounded-lg shadow-md mx-auto mt-4">
         <form onSubmit={handleSubmit} className="contact-form w-full">
           <fieldset id="fs-frm-inputs">
             <div className="form-control mb-4">

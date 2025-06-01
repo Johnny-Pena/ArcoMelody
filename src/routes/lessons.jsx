@@ -20,7 +20,7 @@ export const meta = () => {
   
 export default function Lessons() {
     return (
-        <div className="flex flex-col items-center justify-center bg-base-200 mt-14">
+        <div className="flex flex-col items-center justify-center bg-base-200 mt-14 px-4 w-full">
             <LessonsTitlePage />    
             <Testimonials  />
             <div id="pricing-section" className="pt-16">

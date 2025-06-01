@@ -28,9 +28,9 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-base-300 z-50">
-      <div className="navbar bg-base-300">
+      <div className="navbar bg-base-300 max-w-screen-xl mx-auto">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown ml-6">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -48,16 +48,16 @@ export default function Navbar() {
             <ul
               tabIndex={0}
               role="menu"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li role="menuitem"><Link to="/">Home</Link></li>
-              <li role="menuitem"><Link to="/lessons">Lessons</Link></li>
-              <li role="menuitem"><HashLink smooth to="/lessons#pricing-section">Pricing</HashLink></li>
-              <li role="menuitem"><Link to="/bio">Bio</Link></li>
-              <li role="menuitem"><Link to="/core-values">Core Values</Link></li>
-              <li role="menuitem"><Link to="/contact">Contact</Link></li>
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow mb-14">
+              <li role="menuitem"><Link to="/" className="text-xl font-bold">Home</Link></li>
+              <li role="menuitem"><Link to="/lessons" className="text-xl font-bold">Lessons</Link></li>
+              <li role="menuitem"><HashLink smooth to="/lessons#pricing-section" className="text-xl font-bold">Pricing</HashLink></li>
+              <li role="menuitem"><Link to="/bio" className="text-xl font-bold">Bio</Link></li>
+              <li role="menuitem"><Link to="/core-values" className="text-xl font-bold">Core Values</Link></li>
+              <li role="menuitem"><Link to="/contact" className="text-xl font-bold">Contact</Link></li>
             </ul>
           </div>
-       <Link to="/" className="btn btn-ghost text-xl flex items-center">
+       <Link to="/" className="btn btn-ghost text-xl flex items-center sm:ml-4">
         <img
           src="/images/ArcoMelodyFavicon-32x32.svg"
           alt="Arco Melody Logo"
@@ -68,8 +68,7 @@ export default function Navbar() {
       </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-lg font-medium" role="menubar">
-            <li role="menuitem"><Link to="/">Home</Link></li>
+          <ul className="menu menu-horizontal px-1 text-sm font-medium sm:text-lg" role="menubar">
             <li role="menuitem"><Link to="/lessons">Lessons</Link></li>
             <li role="menuitem"><HashLink smooth to="/lessons#pricing-section">Pricing</HashLink></li>
             <li role="menuitem"><Link to="/bio">Bio</Link></li>
@@ -88,7 +87,7 @@ export default function Navbar() {
             />
             <span className="ml-2">🌚</span>
           </div>
-          <Link to="/signUp" className="btn btn-primary ml-6 btn-sm lg:btn">Sign Up</Link>
+          <Link to="/signUp" className="btn btn-primary ml-6 mr-10 btn-sm lg:btn">Sign Up</Link>
         </div>
       </div>
     </nav>

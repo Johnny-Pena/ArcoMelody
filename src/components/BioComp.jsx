@@ -5,7 +5,7 @@ export default function BioComp() {
   return (
     <>
     <div className="flex flex-col items-center">
-    <h1 className="text-center text-5xl font-bold mt-24 md: text-2xl">Meet the teachers</h1>
+    <h1 className="text-center text-5xl font-bold mt-24 mb-12 md: text-2xl">Meet the teachers</h1>
 
     <div className="hero bg-base-100">
       <div className="hero-content flex-col lg:flex-row">

@@ -15,6 +15,8 @@ export const meta = () => {
 
 export default function Bio() {
   return (
-      <BioComp />
+      <div className="flex flex-col items-center bg-base-200 min-h-screen pt-8 px-4 w-full">
+        <BioComp />
+      </div>
   );
 }
