@@ -7,7 +7,7 @@ p {
   @apply text-lg;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1120px) {
   .hero {
     background-position: right;
   }

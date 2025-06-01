@@ -60,7 +60,7 @@ export default function PricingCard() {
       </div>
       <div className="flex flex-wrap justify-center gap-4">
         {tiers.map((tier) => (
-          <div key={tier.id} className="card-bordered card bg-base-100 w-96 shadow-xl rounded-lg">
+          <div key={tier.id} className="card-bordered card bg-base-100 w-full max-w-md shadow-xl rounded-lg">
             <div className="card-body items-center text-center">
               <h2 className="card-title text-2xl">{tier.name}</h2>
               <p className="text-3xl font-bold">{tier.priceMonthly}</p>

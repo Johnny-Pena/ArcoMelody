@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const customerReviews = [
   {
     name: 'Aru',
@@ -47,7 +45,7 @@ export default function Testimonials() {
       <h2 className="text-4xl font-bold text-center mt-10">Reviews</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
         {customerReviews.map((review, index) => (
-          <div key={index} className="card bg-base-100 w-96 shadow-xl mb-4">
+          <div key={index} className="card bg-base-100 w-full max-w-md shadow-xl mb-4">
             <div className="card-body">
               <h2 className="card-title">-{review.name}</h2>
               <p>{review.review}</p>
