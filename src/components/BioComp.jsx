@@ -5,13 +5,13 @@ export default function BioComp() {
   return (
     <>
     <div className="flex flex-col items-center">
-    <h1 className="text-center text-5xl font-bold mt-24 mb-12 md: text-2xl">Meet the teachers</h1>
+    <h1 className="text-center text-2xl font-bold mt-14 mb-6 md: text-5xl">Meet the Teachers</h1>
 
     <div className="hero bg-base-100">
       <div className="hero-content flex-col lg:flex-row">
         <img
           src="/images/jennyHeadshotCropped.jpg"
-          className="w-1/4 sm:w-1/4 lg:w-1/3 lg:max-w-sm rounded-lg shadow-2xl"
+          className="w-full rounded-lg shadow-2xl sm:w-1/3"
           alt="Jenny Headshot"
         />
         <div className="lg:ml-8">
@@ -33,7 +33,7 @@ export default function BioComp() {
     <div className="hero-content flex-col lg:flex-row">
       <img
         src="/images/johnny-pena-headshot.jpg"
-        className="w-1/2 sm:w-1/2 lg:w-1/3 lg:max-w-sm rounded-lg shadow-2xl"
+        className="w-full rounded-lg shadow-2xl sm:w-1/3"
         alt="Johnny Headshot"
       />
       <div className="lg:ml-8">

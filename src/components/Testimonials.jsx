@@ -10,8 +10,8 @@ const customerReviews = [
     stars: 5,
   },
   {
-    name: 'Jose',
-    review: 'Jenny is patient and understanding and explains process well enough.',
+    name: 'Rosalinda',
+    review: `Mr. Pena is not only an amazing teacher but also a gifted musician. He is very kind, friendly and has been great at assessing our son's interests to continuously keep him motivated. We highly recommend him!`,
     extraContent: '(review provided from another platform)',
     stars: 5,
   },
@@ -22,8 +22,8 @@ const customerReviews = [
     stars: 5,
   },
   {
-    name: 'Murena',
-    review: 'Jenni makes it so comfortable',
+    name: 'Ximena',
+    review: `Mr. Johnny’s teaching style and patience have made learning the guitar a fun and enjoyable experience for my daughter Sofia. She looked forward to her lessons each week and has shown significant progress in her skills. His dedication to nurturing a love for music in children truly shines through his lessons.`,
     extraContent: '(review provided from another platform)',
     stars: 5,
   },
