@@ -29,7 +29,7 @@ export default function BioComp() {
 
     <div className="divider"></div>
 
-    <div className="hero bg-base-100">
+    <div className="hero bg-base-100 mb-6">
     <div className="hero-content flex-col lg:flex-row">
       <img
         src="/images/johnny-pena-headshot.jpg"
