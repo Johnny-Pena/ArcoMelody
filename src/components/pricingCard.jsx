@@ -6,14 +6,14 @@ const weeklyTiers = [
   {
     name: 'Weekly Hour Lessons',
     id: 'tier-hour',
-    href: '/signUp',
+    href: '/meetandgreet',
     priceMonthly: '$279.99',
     description: 'Billed monthly',
   },
   {
     name: 'Weekly Half Hour Lessons',
     id: 'tier-half-hour',
-    href: '/signUp',
+    href: '/meetandgreet',
     priceMonthly: '$159.99',
     description: 'Billed monthly',
   },
@@ -23,14 +23,14 @@ const biweeklyTiers = [
   {
     name: 'Bi-Weekly One Hour Lessons',
     id: 'tier-hour',
-    href: '/signUp',
+    href2: '/meetandgreet',
     priceMonthly: '$139.99',
     description: 'Billed monthly',
   },
   {
     name: 'Bi-Weekly Half Hour Lessons',
     id: 'tier-half-hour',
-    href: '/signUp',
+    href: '/meetandgreet',
     priceMonthly: '$79.99',
     description: 'Billed monthly',
   },
@@ -66,7 +66,7 @@ export default function PricingCard() {
               <p className="text-3xl font-bold">{tier.priceMonthly}</p>
               <p className="text-base">{tier.description}</p>
               <div className="card-actions mt-4">
-                <Link to={tier.href} className="btn btn-primary">Sign Up</Link>
+                <Link to={tier.href} className="btn btn-primary">Schedule Meet and Greet</Link>
               </div>
             </div>
           </div>

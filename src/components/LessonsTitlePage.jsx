@@ -26,8 +26,8 @@ export default function LessonsTitlePage() {
           Now enrolling violin, viola, and guitar students of all ages and skill levels for virtual lessons.
         </p>
         <div className="card-actions justify-end">
-          <Link to="/signUp">
-            <button className="btn btn-primary">Sign Up for Virtual Lessons Now</button>
+          <Link to="/meetandgreet">
+            <button className="btn btn-primary">Schedule a Meet and Greet</button>
           </Link>
         </div>
       </div>

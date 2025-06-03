@@ -10,7 +10,7 @@ export default function BioComp() {
     <div className="hero bg-base-100">
       <div className="hero-content flex-col lg:flex-row">
         <img
-          src="/images/jennyHeadshotCropped.jpg"
+          src="/images/jennyDowntownAustin.jpg"
           className="w-full rounded-lg shadow-2xl sm:w-1/3"
           alt="Jenny Headshot"
         />
@@ -22,7 +22,7 @@ export default function BioComp() {
           <p>
             Jenny is currently an active educator in Texas and has experience leading numerous K-5 String and music programs. But no matter your age, she can definitely help take your playing to the next level. Jenny has received a bachelor's degree in Music Education from the University of Texas in San Antonio (UTSA).
           </p>
-          <Link to="/signUp" className="btn btn-primary mt-6">Sign Up</Link>
+          <Link to="/meetandgreet" className="btn btn-primary mt-6">Schedule a Meet and Greet</Link>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@ export default function BioComp() {
         <p className="py-6">
         Johnny has recently begun a solo music project in which he releases original music under the artist name, “Key Mosaic.” His music features both classical and electric guitars. He enjoys blending classical and contemporary styles to create his music.
         </p>
-        <Link to="/signUp" className="btn btn-primary mt-6">Sign Up</Link>
+        <Link to="/meetandgreet" className="btn btn-primary mt-6">Schedule a Meet and Greet</Link>
       </div>
     </div>
     </div>

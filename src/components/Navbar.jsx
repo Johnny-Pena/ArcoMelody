@@ -87,7 +87,7 @@ export default function Navbar() {
             />
             <span className="ml-2">🌚</span>
           </div>
-          <Link to="/signUp" className="btn btn-primary ml-6 mr-10 btn-sm lg:btn">Sign Up</Link>
+          <Link to="/meetandgreet" className="btn btn-primary ml-6 mr-10 btn-sm lg:btn">Schedule a Meet and Greet</Link>
         </div>
       </div>
     </nav>
