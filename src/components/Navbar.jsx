@@ -78,14 +78,14 @@ export default function Navbar() {
         </div>
         <div className="navbar-end">
           <div className="flex items-center">
-            <span className="ml-2">🌞</span>
+            <span className="ml-2 mr-2">🌞</span>
             <input
               type="checkbox"
               className="toggle toggle-sm md:toggle-md"
               onChange={handleToggle}
               checked={theme === "dracula"}
             />
-            <span className="mr-2">🌚</span>
+            <span className="mr-2 ml-2">🌚</span>
           </div>
           <Link to="/meetandgreet" className="btn btn-primary ml-2 mr-5 btn-sm lg:btn">Meet a Teacher</Link>
         </div>
