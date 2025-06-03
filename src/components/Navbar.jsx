@@ -30,7 +30,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-base-300 z-50">
       <div className="navbar bg-base-300 max-w-screen-xl mx-auto">
         <div className="navbar-start">
-          <div className="dropdown ml-6">
+          <div className="dropdown ml-2">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,11 +57,11 @@ export default function Navbar() {
               <li role="menuitem"><Link to="/contact" className="text-xl font-bold">Contact</Link></li>
             </ul>
           </div>
-       <Link to="/" className="btn btn-ghost text-xl flex items-center sm:ml-4">
+       <Link to="/" className="btn btn-ghost text-xl flex items-center">
         <img
           src="/images/ArcoMelodyFavicon-32x32.svg"
           alt="Arco Melody Logo"
-          className="w-7 h-7"
+          className="w-6 h-6 sm:w-7 h-7"
           style={{ display: "inline-block" }}
         />
         <span className="hidden sm:inline">Arco Melody</span>
@@ -78,16 +78,16 @@ export default function Navbar() {
         </div>
         <div className="navbar-end">
           <div className="flex items-center">
-            <span className="mr-2">🌞</span>
+            <span className="">🌞</span>
             <input
               type="checkbox"
               className="toggle toggle-sm md:toggle-md"
               onChange={handleToggle}
               checked={theme === "dracula"}
             />
-            <span className="ml-2">🌚</span>
+            <span className="">🌚</span>
           </div>
-          <Link to="/meetandgreet" className="btn btn-primary ml-6 mr-10 btn-sm lg:btn">Schedule a Meet and Greet</Link>
+          <Link to="/meetandgreet" className="btn btn-primary ml-2 mr-5 btn-sm lg:btn">Meet a Teacher</Link>
         </div>
       </div>
     </nav>
