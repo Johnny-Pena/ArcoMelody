@@ -22,7 +22,7 @@ export default function CoreValuesCard() {
   return (
     <>
       {coreValuesArr.map(({ coreValueName, definition }, index) => (
-        <div key={index} className="card card-border bg-base-100 w-96 mb-4">
+        <div key={index} className="card card-border bg-base-100 w-full max-w-md mb-4">
           <div className="card-body">
             <h2 className="card-title text-accent text-4xl font-bold">{coreValueName}</h2>
             <p>{definition}</p>

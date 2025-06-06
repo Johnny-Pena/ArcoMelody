@@ -16,8 +16,13 @@ export const meta = () => {
 
 export default function CoreValues() {
   return (
-    <div className="flex flex-col items-center justify-start bg-base-200 min-h-screen pt-8 px-4 w-full">
+    <div className="flex flex-col items-center justify-center bg-base-200 mt-14 px-4 w-full">
       <h1 className="text-5xl font-bold mt-16 mb-8">Our Core Values</h1>
+      <img
+        src="/images/Arco-Melody-Logo(Music-is-Joy-No.1).png"
+        alt="Arco Melody Logo"
+        className="w-40 h-40 object-contain mb-8"
+      />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full max-w-5xl justify-items-center">
         <CoreValuesCard />
       </div>
