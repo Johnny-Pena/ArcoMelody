@@ -23,7 +23,7 @@ export default function LessonsTitlePage() {
           We will help you achieve your musical goals whether you are playing your first notes or refining virtuosic techniques.
         </p>  
         <p>
-          Now enrolling violin, viola, and guitar students of all ages and skill levels for virtual lessons.
+          Enrollment is now open for virutal violin, viola, and guitar lessons.
         </p>
         <div className="card-actions justify-end">
           <Link to="/meetandgreet">
