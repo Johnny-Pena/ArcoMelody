@@ -54,6 +54,7 @@ export default function Navbar() {
               <li role="menuitem"><HashLink smooth to="/lessons#pricing-section" className="text-xl font-bold">Pricing</HashLink></li>
               <li role="menuitem"><Link to="/bio" className="text-xl font-bold">Bio</Link></li>
               <li role="menuitem"><Link to="/core-values" className="text-xl font-bold">Core Values</Link></li>
+              <li role="menuitem"><Link to="/testimonials" className="text-xl font-bold">Testimonials</Link></li>
               <li role="menuitem"><Link to="/contact" className="text-xl font-bold">Contact</Link></li>
             </ul>
           </div>
@@ -73,6 +74,7 @@ export default function Navbar() {
             <li role="menuitem"><HashLink smooth to="/lessons#pricing-section">Pricing</HashLink></li>
             <li role="menuitem"><Link to="/bio">Bio</Link></li>
             <li role="menuitem"><Link to="/core-values">Core Values</Link></li>
+            <li role="menuitem"><Link to="/testimonials">Testimonials</Link></li>
             <li role="menuitem"><Link to="/contact">Contact</Link></li>
           </ul>
         </div>

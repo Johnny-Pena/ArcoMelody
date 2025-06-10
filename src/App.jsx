@@ -13,6 +13,7 @@ import AnalyticsTracker from './components/AnalyticsTracker.jsx';
 import CoreValues from './routes/coreValues.jsx';
 import MeetAndGreet from './routes/meetandgreet.jsx';
 import MetaPixel from './ultils/meta/metaPixel.jsx';
+import TestimonialsPage from './routes/testimonialsPage.jsx';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <Route path="/meetandgreet" element={<MeetAndGreet />} />
       <Route path="/studio-policy" element={<StudioPolicy />} />
       <Route path="/core-values" element={<CoreValues />} />
+      <Route path="/testimonials" element={<TestimonialsPage />} />
     </Routes>
     <Footer />
   </div>
