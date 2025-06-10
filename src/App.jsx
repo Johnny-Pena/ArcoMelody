@@ -12,12 +12,14 @@ import StudioPolicy from './routes/studioPolicy.jsx';
 import AnalyticsTracker from './components/AnalyticsTracker.jsx';
 import CoreValues from './routes/coreValues.jsx';
 import MeetAndGreet from './routes/meetandgreet.jsx';
+import MetaPixel from './ultils/meta/metaPixel.jsx';
 
 function App() {
   return (
 <Router>
   <div>
   <AnalyticsTracker />
+    <MetaPixel />
     <Navbar />
     <Routes>
       <Route path="/" element={<Index />} />

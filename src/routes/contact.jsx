@@ -17,6 +17,11 @@ export const meta = () => {
 export default function Contact() {
     return (
         <div className="bg-base-200 flex flex-col justify-center items-center pt-20 px-4 w-full md:min-h-screen">
+             <img
+        src="/images/Arco-Melody-Logo(B&W)40x40px.png"
+        alt="Arco Melody Logo"
+        className="w-40 h-40 object-contain mb-8"
+      />
             <h1 className="text-center text-5xl font-bold mb-4">Contact Us</h1>
                 <ContactForm />
         </div>
