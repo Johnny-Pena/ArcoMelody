@@ -66,7 +66,7 @@ export default function PricingCard() {
               <p className="text-3xl font-bold">{tier.priceMonthly}</p>
               <p className="text-base">{tier.description}</p>
               <div className="card-actions mt-4">
-                <Link to={tier.href} className="btn btn-primary">Schedule Meet and Greet</Link>
+                <Link to={tier.href} className="btn btn-primary btn-lg">Book a FREE lesson</Link>
               </div>
             </div>
           </div>

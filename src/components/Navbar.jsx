@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="navbar bg-base-300 max-w-screen-xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown ml-2">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost xl:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -68,7 +68,7 @@ export default function Navbar() {
         <span className="hidden sm:inline">Arco Melody</span>
       </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden xl:flex">
           <ul className="menu menu-horizontal px-1 text-sm font-medium sm:text-lg" role="menubar">
             <li role="menuitem"><Link to="/lessons">Lessons</Link></li>
             <li role="menuitem"><HashLink smooth to="/lessons#pricing-section">Pricing</HashLink></li>
@@ -89,7 +89,7 @@ export default function Navbar() {
             />
             <span className="mr-2 ml-2">🌚</span>
           </div>
-          <Link to="/meetandgreet" className="btn btn-primary ml-2 mr-5 btn-sm lg:btn">Meet a Teacher</Link>
+          <Link to="/meetandgreet" className="btn btn-primary ml-2 mr-5 btn-lg">Book a FREE lesson</Link>
         </div>
       </div>
     </nav>
