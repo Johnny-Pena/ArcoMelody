@@ -1,4 +1,4 @@
-import MeetAndGreetScript from '../components/MeetAndGreetScript';
+import FirstLessonScript from '../components/FirstLessonComponent';
 
 export const meta = () => {
   return [
@@ -14,10 +14,10 @@ export const meta = () => {
   ];
 };
 
-export default function MeetAndGreet() {
+export default function FirstLessonPage() {
     return (
         <div className="flex flex-col items-center justify-center bg-base-200 mt-14 px-4 w-full">
-            <MeetAndGreetScript />
+            <FirstLessonScript />
         </div>
     );
 }

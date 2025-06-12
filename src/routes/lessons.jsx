@@ -20,8 +20,8 @@ export const meta = () => {
   
 export default function Lessons() {
     return (
-        <div className="flex flex-col items-center justify-center bg-base-200 mt-14 px-4 w-full">
-            <h1 className="text-3xl font-bold mt-16 mb-8 sm:text-5xl">Virtual Music Lessons</h1>
+        <div className="flex flex-col items-center justify-center bg-base-200 mt-1 px-4 w-full">
+            <h1 className="text-3xl font-bold mt-16 mb-4 sm:text-5xl">Virtual Music Lessons</h1>
             <LessonsTitlePage />    
             <Testimonials  />
             <div id="pricing-section" className="pt-16">

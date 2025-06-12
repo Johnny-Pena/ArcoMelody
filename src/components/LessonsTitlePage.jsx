@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function LessonsTitlePage() {
   return (
     <>
-      <div className="card lg:card-side bg-base-100 shadow-xl mt-8 lg:w-2/3">
+      <div className="card lg:card-side bg-base-100 shadow-xl mt-4 lg:w-2/3">
         <div className="flex justify-center items-center p-4">
           <div className="w-full sm:w-3/4 lg:w-[560px] lg:h-[315px]">
             <iframe
@@ -29,12 +29,12 @@ export default function LessonsTitlePage() {
           </ul>
           <h3 className="font-semibold mt-2 mb-1 text-left text-xl">How It Works</h3>
           <ol className="list-decimal list-inside mb-4 text-left text-lg">
-            <li>Sign up for a FREE Meet & Greet</li>
+            <li>Sign up for a FREE lesson</li>
             <li>Get matched with your teacher</li>
             <li>Begin your musical journey!</li>
           </ol>
           <div className="card-actions justify-center">
-            <Link to="/meetandgreet">
+            <Link to="/first-lesson">
               <button className="btn btn-primary btn-lg">
                 Book a FREE lesson
               </button>

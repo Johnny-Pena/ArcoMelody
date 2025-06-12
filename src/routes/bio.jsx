@@ -1,4 +1,5 @@
 import BioComp from '../components/BioComp';
+
 export const meta = () => {
   return [
     { title: "Arco Melody | Bio" },

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function MeetAndGreetScript() {
+export default function FirstLessonScript() {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://embed.acuityscheduling.com/js/embed.js';
