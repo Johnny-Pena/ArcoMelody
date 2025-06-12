@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 export default function MetaPixel() {
-  const pixelId = import.meta.env.PIXEL_ID;
+  const pixelId = import.meta.env.VITE_PIXEL_ID;
 
   useEffect(() => {
     if (window.fbq) return;
