@@ -31,7 +31,7 @@ export default function LessonsTitlePage() {
           <ol className="list-decimal list-inside mb-4 text-left text-lg">
             <li>Sign up for a FREE lesson</li>
             <li>Get matched with your teacher</li>
-            <li>Begin your musical journey!</li>
+            <li>Subscribe to a plan that works best for you <br />and begin your musical journey!</li>
           </ol>
           <div className="card-actions justify-center">
             <Link to="/first-lesson">
