@@ -2,12 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div
-      className="hero min-h-screen"
-      style={{
-        backgroundImage: "url(/images/Jenny-Website-Grey.png)",
-      }}
-    >
+    <div className="hero min-h-screen">
       <div className="hero-overlay"
         style={{
           backgroundColor: "rgba(0, 0, 0, 0.25)",
