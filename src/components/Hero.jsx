@@ -22,7 +22,7 @@ export default function Hero() {
           backgroundColor: "rgba(0, 0, 0, 0.25)",
         }}
       ></div>
-      <div className="hero-content text-neutral-content text-right sm:text-left pt-24">
+      <div className="hero-content text-neutral-content text-left pb-100 sm:pt-24">
         <div className="max-w-md mt-10 sm:max-w-2xl mt-40">
           <h1 className="mb-5 text-2xl font-bold sm:text-5xl">
             Melodies at your fingertips. <br />From anywhere.
