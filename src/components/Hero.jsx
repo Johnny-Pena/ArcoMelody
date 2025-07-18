@@ -11,7 +11,7 @@ export default function Hero() {
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth <= 400) {
+      if (window.innerWidth <= 350) {
         setBgStyle({
           backgroundImage: `url(/images/jennyHeadshotCropped.png)`,
           backgroundSize: "130%", 
