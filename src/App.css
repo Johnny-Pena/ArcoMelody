@@ -7,20 +7,6 @@ p {
   @apply text-lg;
 }
 
-.hero {
-  background-image: url('/images/Jenny-Website-Grey.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
-@media (max-width: 600px) {
-  .hero {
-    background-image: url('/images/Jenny-Website-Grey-Smartphone-min.png');
-    background-size: cover;
-  }
-}
-
   .footer p {
     @apply text-base;
   }
