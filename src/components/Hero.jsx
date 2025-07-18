@@ -1,39 +1,21 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const [bgStyle, setBgStyle] = useState({
+  const bgStyle = {
     backgroundImage: `url(/images/jennyHeadshotCropped.png)`,
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "right bottom",
-  });
-
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth <= 350) {
-        setBgStyle({
-          backgroundImage: `url(/images/jennyHeadshotCropped.png)`,
-          backgroundSize: "130%", 
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "left bottom", 
-        });
-      } else {
-        setBgStyle({
-          backgroundImage: `url(/images/jennyHeadshotCropped.png)`,
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "right bottom",
-        });
-      }
-    }
-    window.addEventListener("resize", handleResize);
-    handleResize(); 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  };
 
   return (
-    <div className="hero min-h-screen" style={bgStyle}>
+ <div
+  className="hero"
+  style={{
+    ...bgStyle,
+    minHeight: "95vh", // Ensures hero fills the viewport
+  }}
+>
       <div
         className="hero-overlay"
         style={{
