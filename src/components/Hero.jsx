@@ -13,7 +13,7 @@ export default function Hero() {
   className="hero"
   style={{
     ...bgStyle,
-    minHeight: "95vh", // Ensures hero fills the viewport
+    minHeight: "95vh",
   }}
 >
       <div
