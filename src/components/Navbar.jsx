@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="navbar bg-base-300 max-w-screen-xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown ml-2">
-            <div tabIndex={0} role="button" className="btn btn-ghost xl:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost xl:hidden" aria-label="Open navigation menu">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -90,6 +90,7 @@ export default function Navbar() {
               className="toggle toggle-sm md:toggle-md"
               onChange={handleToggle}
               checked={theme === "dracula"}
+              aria-label="Toggle dark mode theme"
             />
             <span className="mr-2 ml-2">🌚</span>
           </div>
