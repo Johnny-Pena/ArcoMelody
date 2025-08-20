@@ -16,11 +16,20 @@ export default function BioComp() {
         />
         <div className="lg:ml-8">
           <h3 className="text-2xl font-bold">Jenny Peña</h3>
-          <p className="py-6">
-            With a collaborative, encouraging teaching style, Jenny could not be more thrilled to team up with you and start you on your musical journey!
+          <p className="py-3">
+            Jenny Peña is a graduate of the University of Texas at San Antonio with a Bachelor’s degree in Music Education and a Suzuki-registered teacher since 2014. Jenny is a co-owner of a virtual music school, Arco Melody LLC. She opened Arco Melody with her husband, Johnny Peña, in November 2024.
           </p>
-          <p>
-            Jenny is currently an active educator in Texas and has experience leading numerous K-5 String and music programs. But no matter your age, she can definitely help take your playing to the next level. Jenny has received a bachelor's degree in Music Education from the University of Texas in San Antonio (UTSA).
+          <p className="py-3">
+            She began playing the violin at the age of 7 through an after-school violin program at a local church in Laredo, TX. She continued to play violin throughout her middle and highschool years in her school's orchestra programs. Jenny once taught as a public school Elementary Music with Northside ISD in San Antonio, TX. She was in charge of teaching general music class to Kinder – 5 th grade students on campus and an after-school 5th-grade strings program.
+          </p>
+          <p className="py-3">
+            She performs professionally around the Austin area with community orchestras and her violin/ duo with her husband, Duo Peña. Her professional associations include being a member of the Texas Music Educators Association and the Suzuki Association of the Americas.
+          </p>
+          <p className="py-3">
+            Jenny has had the incredible opportunity to perform alongside world-renowned Mariachi Vargas de Tecalitlan on multiple occasions. She also had the opportunity to be a part of Rachel Podgers’, internationally renowned Baroque Violinist, residency at UTSA in2016. She took a master class and performed in various ensembles with Ms. Podger.
+          </p>
+          <p className="py-3">
+            It is Jenny’s goal to continue to provide high-quality music instruction to her students through private instruction. She believes that everyone should have the opportunity to create beautiful music from the comfort of their own homes with virtual music lessons.
           </p>
           <Link to="/first-lesson" className="btn btn-primary btn-lg mt-6">Book a FREE lesson</Link>
         </div>
