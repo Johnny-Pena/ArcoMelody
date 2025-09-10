@@ -6,7 +6,7 @@ export default function TrustBadges() {
           <h2 className="text-3xl font-bold mb-4">Why Students Choose Arco Melody</h2>
           <p className="text-lg opacity-80">Trusted by families across Texas and beyond</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center max-w-4xl mx-auto justify-center">
           <div className="stat bg-base-100 rounded-lg shadow p-4">
             <div className="stat-value text-primary">1,000+</div>
             <div className="stat-title">Students Taught</div>
@@ -18,26 +18,24 @@ export default function TrustBadges() {
                 Combined experience (schools, university & private)
               </span>
 
-              {/* tooltip button: accessible attributes + daisyUI data-tip */}
-              <button
-                className="btn btn-circle btn-xs opacity-70"
-                aria-describedby="students-desc"
-                aria-label="More information about Students Taught"
-                title="More information"
-                data-tip="Both owners' combined teaching experience including public schools, university, and private lessons before and during Arco Melody">
-                ?
-              </button>
+              {/* DaisyUI v5+ tooltip button */}
+              <div className="tooltip" data-tip="Both owners' combined teaching experience including public schools, university, and private lessons before and during Arco Melody.">
+                <button
+                  className="btn btn-circle btn-xs opacity-70"
+                  aria-describedby="students-desc"
+                  aria-label="More information about Students Taught"
+                  title="More information"
+                  type="button"
+                >
+                  ?
+                </button>
+              </div>
 
               {/* hidden offscreen description for screen readers (matches data-tip) */}
               <span id="students-desc" className="sr-only">
                 Both owners' combined teaching experience including public schools, university, and private lessons before and during Arco Melody.
               </span>
             </div>
-          </div>
-          <div className="stat bg-base-100 rounded-lg shadow">
-            <div className="stat-value text-info">100+</div>
-            <div className="stat-title">Arco Melody Students</div>
-            <div className="stat-desc">Since 2014</div>
           </div>
           <div className="stat bg-base-100 rounded-lg shadow">
             <div className="stat-value text-accent">Suzuki</div>

@@ -5,7 +5,7 @@ const instruments = [
   { slug: "violin", title: "Violin", icon: "🎻", subtitle: "Classical & Contemporary", teacher: "Jenny Peña" },
   { slug: "viola", title: "Viola", icon: "🎻", subtitle: "Classical & Contemporary", teacher: "Jenny Peña" },
   { slug: "guitar", title: "Guitar", icon: "🎸", subtitle: "Classical & Electric", teacher: "Johnny Peña" },
-  { slug: "ukulele", title: "Ukulele", icon: "🪕", subtitle: "Classical & Contemporary", teacher: "Johnny Peña" },
+  { slug: "ukulele", title: "Ukulele", icon: "🎼", subtitle: "Classical & Contemporary", teacher: "Johnny Peña" },
 ];
 
 export default function InstrumentShowcase() {
@@ -29,7 +29,7 @@ export default function InstrumentShowcase() {
     <section className="w-full max-w-6xl mx-auto py-16">
       <h2 className="text-3xl font-bold text-center mb-6">Choose Your Instrument</h2>
       <p className="text-center text-sm opacity-70 mb-8 hidden md:block">
-        Select an instrument to prefill your free trial booking — or just click Learn to explore details.
+        Select an instrument to prefill your free trial booking.
       </p>
       <p className="text-center text-sm opacity-70 mb-6 block md:hidden">
         Tap an instrument to select, then book your free trial below.
@@ -78,23 +78,6 @@ export default function InstrumentShowcase() {
                   <h3 className="text-lg font-semibold">{item.title}</h3>
                   <p className="text-sm opacity-75 mb-3">{item.subtitle}</p>
 
-                  <ul className="text-sm mb-3 space-y-1">
-                    <li>✓ Tailored lesson plans</li>
-                    <li>✓ Ages 7+ (adaptable)</li>
-                  </ul>
-
-                  <div className="text-xs opacity-70 mb-3">Teacher: {item.teacher}</div>
-
-                  <div className="flex justify-center gap-2">
-                    <Link
-                      to={`/lessons/${item.slug}`}
-                      className="btn btn-outline btn-sm"
-                      aria-label={`Learn more about ${item.title}`}
-                      onClick={(e) => e.stopPropagation()} // prevent selecting card when clicking Learn
-                    >
-                      Learn
-                    </Link>
-                  </div>
                 </div>
               </div>
             </article>

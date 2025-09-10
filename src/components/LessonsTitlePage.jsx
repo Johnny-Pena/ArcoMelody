@@ -38,9 +38,6 @@ export default function LessonsTitlePage() {
             </Link>
           </div>
           
-          <p className="text-center text-sm opacity-70 mt-2">
-            Join 100+ students who chose Arco Melody
-          </p>
         </div>
       </div>
     </>

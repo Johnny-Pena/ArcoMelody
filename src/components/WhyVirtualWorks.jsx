@@ -60,10 +60,9 @@ export default function WhyVirtualWorks() {
             </div>
             <div className="bg-base-100 p-4 rounded-lg">
               <p className="italic mb-2">
-                "As a working adult, virtual guitar lessons fit perfectly into my schedule. 
-                I can take a lesson during my lunch break without leaving the house."
+                "Mr. Pena is not only an amazing teacher but also a gifted musician. He is very kind, friendly and has been great at assessing our son's interests to continuously keep him motivated. We highly recommend him!"
               </p>
-              <p className="text-sm font-semibold">- Michael R., Adult Student</p>
+              <p className="text-sm font-semibold">- Rosalinda, Parent</p>
             </div>
           </div>
         </div>
