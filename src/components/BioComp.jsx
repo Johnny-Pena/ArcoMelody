@@ -15,7 +15,20 @@ export default function BioComp() {
           alt="Jenny Headshot"
         />
         <div className="lg:ml-8">
-          <h3 className="text-2xl font-bold">Jenny Peña</h3>
+          <div className="flex items-center gap-3 mb-4">
+            <h3 className="text-2xl font-bold">Jenny Peña</h3>
+            <div className="badge badge-primary">Suzuki-Certified</div>
+            <div className="badge badge-secondary">Bachelor of Music Degree</div>
+            <div className="badge badge-info">15+ Years</div>
+          </div>
+          <p className="text-lg font-semibold text-accent mb-3">
+            Violin & Viola • Ages 8-Adult • Music Education Degree
+          </p>
+          <div className="bg-base-200 p-4 rounded-lg mb-4">
+            <p className="text-sm italic">
+              💬 "Carmen, adult: 'Like alway I enjoy and learning new way to improve myself in learning the violin!! Love my teacher!!'
+            </p>
+          </div>
           <p className="py-3">
             Jenny Peña is a graduate of the University of Texas at San Antonio with a Bachelor’s degree in Music Education and a Suzuki-registered teacher since 2014. Jenny is a co-owner of a virtual music school, Arco Melody LLC. She opened Arco Melody with her husband, Johnny Peña, in November 2024.
           </p>
@@ -31,7 +44,7 @@ export default function BioComp() {
           <p className="py-3">
             It is Jenny’s goal to continue to provide high-quality music instruction to her students through private instruction. She believes that everyone should have the opportunity to create beautiful music from the comfort of their own homes with virtual music lessons.
           </p>
-          <Link to="/first-lesson" className="btn btn-primary btn-lg mt-6">Book a FREE lesson</Link>
+          <Link to="/first-lesson" className="btn btn-primary btn-lg mt-6">Book Free Trial with Jenny</Link>
         </div>
       </div>
     </div>
@@ -46,7 +59,19 @@ export default function BioComp() {
         alt="Johnny Headshot"
       />
       <div className="lg:ml-8">
-        <h3 className="text-2xl font-bold">Johnny Peña</h3>
+        <div className="flex items-center gap-3 mb-4">
+          <h3 className="text-2xl font-bold">Johnny Peña</h3>
+          <div className="badge badge-primary">Master's Degree</div>
+          <div className="badge badge-secondary">15+ Years</div>
+        </div>
+        <p className="text-lg font-semibold text-accent mb-3">
+          Classical Guitar, Electric Guitar, and Ukulele • Ages 8-Adult • Competition Winner
+        </p>
+        <div className="bg-base-200 p-4 rounded-lg mb-4">
+          <p className="text-sm italic">
+            💬 "Rosalinda, parent: 'Mr. Pena is not only an amazing teacher but also a gifted musician.'"
+          </p>
+        </div>
         <p className="py-6">
         Johnny Peña has been a music educator for the last 15 years and has taught private guitar instruction, guitar ensemble, guitar literature, music theory, and guitar pedagogy. He has been on faculty at two Universities: The University of Texas of San Antonio (2018-2022) and Baptist University of the Americas (2016-2018) as a lecturer of guitar. He received a Master of Music Degree in Guitar Performance from UTSA under the direction of Dr. Matthew Dunne in December 2014.
         </p>
@@ -55,7 +80,7 @@ export default function BioComp() {
         <p className="py-6">
         Johnny has recently begun a solo music project in which he releases original music under the artist name, “Key Mosaic.” His music features both classical and electric guitars. He enjoys blending classical and contemporary styles to create his music.
         </p>
-        <Link to="/first-lesson" className="btn btn-primary btn-lg mt-6">Book a FREE lesson</Link>
+        <Link to="/first-lesson" className="btn btn-primary btn-lg mt-6">Book Free Trial with Johnny</Link>
       </div>
     </div>
     </div>

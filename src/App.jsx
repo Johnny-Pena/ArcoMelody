@@ -29,6 +29,7 @@ function App() {
       <Route path="/lessons" element={<Lessons />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/first-lesson" element={<FirstLessonPage />} />
+      <Route path="/firstlesson" element={<FirstLessonPage />} />
       <Route path="/studio-policy" element={<StudioPolicy />} />
       <Route path="/core-values" element={<CoreValues />} />
       <Route path="/testimonials" element={<TestimonialsPage />} />

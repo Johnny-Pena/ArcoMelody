@@ -19,27 +19,28 @@ export default function LessonsTitlePage() {
         </div>
         <div className="card-body">
           <h2 className="card-title font-bold text-2xl sm:text-2xl mb-2 text-left">
-            Melodies at your fingertips. From Anywhere.
+            Why Choose Virtual Lessons with Arco Melody?
           </h2>
+          
           <ul className="list-disc list-inside mb-4 text-left text-lg">
-            <li>Learn from experienced teachers</li>
-            <li>Personalized curriculum for every student</li>
-            <li>Flexible scheduling to fit your needs</li>
-            <li>Play your favorite songs</li>
+            <li><strong>Experienced teachers</strong> with university degrees</li>
+            <li><strong>Personalized curriculum</strong> tailored to your goals</li>
+            <li><strong>Flexible scheduling</strong> that fits your lifestyle</li>
+            <li><strong>Play your favorite songs</strong> alongside classical training</li>
+            <li><strong>Record lessons</strong> for practice at home</li>
           </ul>
-          <h3 className="font-semibold mt-2 mb-1 text-left text-xl">How It Works</h3>
-          <ol className="list-decimal list-inside mb-4 text-left text-lg">
-            <li>Sign up for a FREE lesson</li>
-            <li>Get matched with your teacher</li>
-            <li>Subscribe to a plan that works best for you <br />and begin your musical journey!</li>
-          </ol>
+          
           <div className="card-actions justify-center">
             <Link to="/first-lesson">
-              <button className="btn btn-primary btn-lg">
-                Book a FREE lesson
+              <button className="btn btn-primary btn-lg animate-pulse">
+                🎵 Start Your FREE Trial Now
               </button>
             </Link>
           </div>
+          
+          <p className="text-center text-sm opacity-70 mt-2">
+            Join 100+ students who chose Arco Melody
+          </p>
         </div>
       </div>
     </>
