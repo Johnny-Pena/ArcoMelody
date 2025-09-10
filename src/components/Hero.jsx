@@ -7,7 +7,7 @@ export default function Hero() {
 
         {/* PHOTO CARD (first in DOM for desktop right-side display) */}
         <div className="lg:w-1/3 order-2 lg:order-1 mt-6 lg:mt-0">
-          <div className="card bg-base-200 shadow-lg">
+          <div className="card bg-base-200 shadow-lg pb-10">
          <figure className="px-6 pt-6">
 <div className="mx-auto w-64 h-64 rounded-full overflow-hidden ring-4 ring-white">
   <picture>
@@ -29,21 +29,7 @@ export default function Hero() {
   </picture>
 </div>
           </figure>
-
-            <div className="card-body text-center">
-              <h3 className="card-title justify-center">Jenny Peña</h3>
-              <p className="text-sm">
-                Co-owner & Lead Violin/Viola Teacher • Suzuki-certified • 10+ years teaching
-              </p>
-
-              <Link 
-                to="/bio" 
-                className="text-xs mt-2 underline"
-                aria-label="View Jenny Peña bio and credentials"
-              >
-                View bio & credentials
-              </Link>
-            </div>
+          
           </div>
         </div>
 
@@ -83,7 +69,7 @@ export default function Hero() {
             <span className="mr-2" aria-hidden="true">🎻</span><span className="mr-3">Violin</span>
             <span className="mr-2" aria-hidden="true">🎻</span><span className="mr-3">Viola</span>
             <span className="mr-2" aria-hidden="true">🎸</span><span className="mr-3">Guitar</span>
-            <span className="mr-2" aria-hidden="true">🪕</span><span className="mr-3">Ukulele</span>
+            <span className="mr-2" aria-hidden="true">🎼</span><span className="mr-3">Ukulele</span>
             <span className="mx-2">•</span>
             <Link 
               to="/bio" 
