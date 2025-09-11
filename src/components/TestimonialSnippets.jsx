@@ -15,33 +15,33 @@ export default function TestimonialSnippets() {
       id: 1,
       name: "Sarah",
       description: "Parent, Texas",
-      instrument: "Daughter taking violin • 3 months",
+      instrument: "Daughter taking violin for 1 year",
       preview: '"My daughter LOVES her instructor — improved tremendously in 3 months!"',
       full: '"My daughter LOVES her instructor and playing the violin! My daughter has improved tremendously. I like how sometimes my daughter can request songs that she wants to learn based on the music she likes. This is a wonderful program!"',
       source: "Google review",
-      date: "March 2025",
+      date: "",
       avatar: "S"
     },
     {
       id: 2,
       name: "Rosalinda",
       description: "Parent, Texas", 
-      instrument: "Son and daughter taking guitar • 11 years",
+      instrument: "Son and daughter taking guitar for 11 years",
       preview: '"Mr. Pena is an amazing teacher and gifted musician. Very kind and keeps our son motivated!"',
       full: '"Mr. Pena is not only an amazing teacher but also a gifted musician. He is very kind, friendly and has been great at assessing our son\'s interests to continuously keep him motivated. We highly recommend him!"',
       source: "Direct testimonial",
-      date: "January 2025",
+      date: "",
       avatar: "R"
     },
     {
       id: 3,
       name: "Roberta",
       description: "Adult student, New York",
-      instrument: "Violin • 2 years",
+      instrument: "Violin for 2 years",
       preview: '"Jenny has helped me grow as a musician starting at age 48. I really cannot say enough about her!"',
       full: '"Jenny has been my violin instructor for the last 2 years and her skills and expertise have really helped me grow as a musician. That is a lot for starting to play a new instrument at age 48. I am 50 now and I take lessons every other week using Google meets and my phone, but a laptop is ideal. I am in New York and she is in Texas, but she always works with me if things come up unexpectedly. I really cannot say enough about her! Thank you for helping me live my dream."',
       source: "Direct testimonial",
-      date: "February 2025",
+      date: "",
       avatar: "R"
     }
   ];
@@ -56,7 +56,7 @@ export default function TestimonialSnippets() {
             <div key={testimonial.id} className="card bg-base-200 shadow-lg">
               <div className="card-body">
                 <div className="flex items-center mb-4">
-                  <div className="avatar placeholder">
+                  <div className="avatar placeholder hidden">
                     <div className="bg-primary text-primary-content rounded-full w-12">
                       <span className="text-xl">{testimonial.avatar}</span>
                     </div>

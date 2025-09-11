@@ -69,13 +69,10 @@ export default function WhyVirtualWorks() {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <h3 className="text-2xl font-bold mb-4">Ready to Experience the Difference?</h3>
+          <h3 className="text-2xl font-bold mb-4">Ready to start your musical journey?</h3>
           <a href="/first-lesson" className="btn btn-primary btn-lg">
             Book Your Free Trial Now
           </a>
-          <p className="text-sm opacity-70 mt-2">
-            See why virtual lessons are the future of music education
-          </p>
         </div>
       </div>
     </div>

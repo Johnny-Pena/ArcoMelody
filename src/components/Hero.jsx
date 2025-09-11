@@ -36,10 +36,10 @@ export default function Hero() {
         {/* CONTENT (second in DOM for proper flex order on desktop) */}
         <div className="lg:w-2/3 lg:pr-8 order-1 lg:order-2">
           <h1 className="mb-5 text-3xl font-bold sm:text-5xl">
-            Learn violin, viola, guitar & ukulele online — personalized lessons for any age
+            Melodies at your fingertips. <br />From anywhere.
           </h1>
 
-          <p className="mb-5 text-lg font-medium sm:text-xl">
+          <p className="mb-5 text-2xl font-semibold sm:text-3xl">
             Experienced teachers • Tailored lesson plans • Free 20-minute trial
           </p>
 
@@ -60,23 +60,19 @@ export default function Hero() {
             </Link>
           </div>
 
-          <p className="mt-3 text-sm opacity-80">
-            No obligation — pick a teacher & time that works for you
-          </p>
-
           {/* Instrument + team signal (subtle) */}
-          <div className="mt-4 text-sm opacity-70">
-            <span className="mr-2" aria-hidden="true">🎻</span><span className="mr-3">Violin</span>
-            <span className="mr-2" aria-hidden="true">🎻</span><span className="mr-3">Viola</span>
-            <span className="mr-2" aria-hidden="true">🎸</span><span className="mr-3">Guitar</span>
-            <span className="mr-2" aria-hidden="true">🎼</span><span className="mr-3">Ukulele</span>
-            <span className="mx-2">•</span>
+          <div className="mt-4 flex flex-wrap items-center text-2xl gap-x-2 gap-y-1">
+            <span className="mr-2 text-2xl" aria-hidden="true">🎻</span><span className="mr-3 text-2xl">Violin</span>
+            <span className="mr-2 text-2xl" aria-hidden="true">🎻</span><span className="mr-3 text-2xl">Viola</span>
+            <span className="mr-2 text-2xl" aria-hidden="true">🎸</span><span className="mr-3 text-2xl">Guitar</span>
+            <span className="mr-2 text-2xl" aria-hidden="true">🎼</span><span className="mr-3 text-2xl">Ukulele</span>
+            <span className="mx-2 text-2xl">•</span>
             <Link 
-              to="/bio" 
-              className="underline"
+              to="/teacher-bios" 
+              className="underline text-2xl"
               aria-label="Meet all instructors and instruments"
             >
-              More instructors & instruments →
+              Meet the Teachers →
             </Link>
           </div>
         </div>

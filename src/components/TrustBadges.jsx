@@ -14,12 +14,9 @@ export default function TrustBadges() {
             {/* responsive desc: stacks on small screens, row on larger */}
             <div className="stat-desc flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
               {/* allow wrapping, constrain max width so it doesn't overflow */}
-              <span className="text-xs sm:text-sm leading-snug whitespace-normal break-words max-w-[14rem] sm:max-w-xs">
-                Combined experience (schools, university & private)
-              </span>
 
               {/* DaisyUI v5+ tooltip button */}
-              <div className="tooltip" data-tip="Both owners' combined teaching experience including public schools, university, and private lessons before and during Arco Melody.">
+              <div className="tooltip" data-tip="Both owners' combined teaching experience including public schools, university, and private lessons.">
                 <button
                   className="btn btn-circle btn-xs opacity-70"
                   aria-describedby="students-desc"
@@ -39,13 +36,12 @@ export default function TrustBadges() {
           </div>
           <div className="stat bg-base-100 rounded-lg shadow">
             <div className="stat-value text-accent">Suzuki</div>
-            <div className="stat-title">Certified</div>
-            <div className="stat-desc">Proven method</div>
+            <div className="stat-title">Registered violin teacher</div>
           </div>
           <div className="stat bg-base-100 rounded-lg shadow">
             <div className="stat-value text-primary">FREE</div>
             <div className="stat-title">20-Minute Trial</div>
-            <div className="stat-desc">Risk-free</div>
+            <div className="stat-desc">No obligation</div>
           </div>
         </div>
         

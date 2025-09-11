@@ -58,10 +58,10 @@ export default function InstrumentShowcase() {
               <div className="p-3 md:p-5 text-center">
                 {/* Mobile compact layout */}
                 <div className="block md:hidden">
-                  <div className="mx-auto w-10 h-10 rounded-full bg-base-200 flex items-center justify-center text-lg mb-2">
+                  <div className="mx-auto w-10 h-10 rounded-full bg-base-200 flex items-center justify-center text-4xl mb-2">
                     <span aria-hidden="true">{item.icon}</span>
                   </div>
-                  <h3 className="text-sm font-semibold mb-1">{item.title}</h3>
+                  <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
                   {isSelected && (
                     <div className="mt-2 text-xs text-primary font-medium">
                       ✓ Selected
@@ -71,11 +71,11 @@ export default function InstrumentShowcase() {
 
                 {/* Desktop full layout */}
                 <div className="hidden md:block">
-                  <div className="mx-auto w-14 h-14 rounded-full bg-base-200 flex items-center justify-center text-2xl mb-4">
+                  <div className="mx-auto w-14 h-14 rounded-full bg-base-200 flex items-center justify-center text-4xl mb-4">
                     <span aria-hidden="true">{item.icon}</span>
                   </div>
 
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <h3 className="text-2xl font-semibold">{item.title}</h3>
                   <p className="text-sm opacity-75 mb-3">{item.subtitle}</p>
 
                 </div>
