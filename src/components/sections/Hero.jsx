@@ -61,15 +61,16 @@ export default function Hero() {
           </div>
 
           {/* Instrument + team signal (subtle) */}
-          <div className="mt-4 flex flex-wrap items-center text-2xl gap-x-2 gap-y-1">
-            <span className="mr-2 text-2xl" aria-hidden="true">🎻</span><span className="mr-3 text-2xl">Violin</span>
-            <span className="mr-2 text-2xl" aria-hidden="true">🎻</span><span className="mr-3 text-2xl">Viola</span>
-            <span className="mr-2 text-2xl" aria-hidden="true">🎸</span><span className="mr-3 text-2xl">Guitar</span>
-            <span className="mr-2 text-2xl" aria-hidden="true">🎼</span><span className="mr-3 text-2xl">Ukulele</span>
-            <span className="mx-2 text-2xl">•</span>
+          <div className="mt-4 flex flex-wrap items-center text-sm sm:text-2xl gap-x-1 sm:gap-x-2 gap-y-1">
+            <span className="mr-1 sm:mr-2 text-lg sm:text-2xl" aria-hidden="true">🎻</span><span className="mr-2 sm:mr-3 text-lg sm:text-2xl">Violin</span>
+            <span className="mr-1 sm:mr-2 text-lg sm:text-2xl" aria-hidden="true">🎻</span><span className="mr-2 sm:mr-3 text-lg sm:text-2xl">Viola</span>
+            <span className="mr-1 sm:mr-2 text-lg sm:text-2xl" aria-hidden="true">🎸</span><span className="mr-2 sm:mr-3 text-lg sm:text-2xl">Guitar</span>
+            <span className="block w-full sm:hidden"></span>
+            <span className="mr-1 sm:mr-2 text-lg sm:text-2xl" aria-hidden="true">🎼</span><span className="mr-2 sm:mr-3 text-lg sm:text-2xl">Ukulele</span>
+            <span className="mx-1 sm:mx-2 text-lg sm:text-2xl">•</span>
             <Link 
               to="/teacher-bios" 
-              className="underline text-2xl"
+              className="underline text-lg sm:text-2xl"
               aria-label="Meet all instructors and instruments"
             >
               Meet the Teachers →
