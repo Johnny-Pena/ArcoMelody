@@ -4,22 +4,22 @@ import { Link } from "react-router-dom";
 export default function BioComp() {
   return (
     <>
-    <div className="flex flex-col items-center">
-    <h1 className="text-center text-2xl font-bold mt-14 mb-6 md: text-5xl">Meet the Teachers</h1>
+    <div className="flex flex-col items-center px-4">
+    <h1 className="text-center text-2xl font-bold mt-14 mb-6 md:text-5xl">Meet the Teachers</h1>
 
     <div className="hero bg-base-100">
-      <div className="hero-content flex-col lg:flex-row">
+      <div className="hero-content flex-col lg:flex-row max-w-6xl mx-auto px-4">
         <img
           src="/images/jennyDowntownAustin.jpg"
           className="w-full rounded-lg shadow-2xl sm:w-1/3"
           alt="Jenny Headshot"
         />
-        <div className="lg:ml-8">
-          <div className="flex items-center gap-3 mb-4">
-            <h3 className="text-2xl font-bold">Jenny Peña</h3>
-            <div className="badge badge-primary text-xs truncate max-w-[8rem]">Suzuki-Certified</div>
-            <div className="badge badge-secondary text-xs truncate max-w-[11rem]">Bachelor of Music Degree</div>
-            <div className="badge badge-info text-xs truncate max-w-[8rem]">15+ Years</div>
+        <div className="lg:ml-8 w-full">
+          <div className="flex flex-wrap items-center gap-2 mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold w-full sm:w-auto mb-2 sm:mb-0">Jenny Peña</h3>
+            <div className="badge badge-primary text-xs">Suzuki-Certified</div>
+            <div className="badge badge-secondary text-xs">B.M. Degree</div>
+            <div className="badge badge-info text-xs">15+ Years</div>
           </div>
           <p className="text-lg font-semibold text-accent mb-3">
             Violin & Viola • Ages 8-Adult • Music Education Degree
@@ -52,17 +52,17 @@ export default function BioComp() {
     <div className="divider"></div> 
 
     <div className="hero bg-base-100 mb-6">
-    <div className="hero-content flex-col lg:flex-row">
+    <div className="hero-content flex-col lg:flex-row max-w-6xl mx-auto px-4">
       <img
         src="/images/johnny-pena-headshot.jpg"
         className="w-full rounded-lg shadow-2xl sm:w-1/3"
         alt="Johnny Headshot"
       />
-      <div className="lg:ml-8">
-        <div className="flex items-center gap-3 mb-4">
-          <h3 className="text-2xl font-bold">Johnny Peña</h3>
-          <div className="badge badge-primary text-xs truncate max-w-[8rem]">Master's Degree</div>
-          <div className="badge badge-secondary text-xs truncate max-w-[8rem]">15+ Years</div>
+      <div className="lg:ml-8 w-full">
+        <div className="flex flex-wrap items-center gap-2 mb-4">
+          <h3 className="text-xl sm:text-2xl font-bold w-full sm:w-auto mb-2 sm:mb-0">Johnny Peña</h3>
+          <div className="badge badge-primary text-xs">Master's Degree</div>
+          <div className="badge badge-secondary text-xs">15+ Years</div>
         </div>
         <p className="text-lg font-semibold text-accent mb-3">
           Classical Guitar, Electric Guitar, and Ukulele • Ages 8-Adult • Competition Winner
