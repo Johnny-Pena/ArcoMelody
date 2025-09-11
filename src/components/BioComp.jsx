@@ -17,7 +17,7 @@ export default function BioComp() {
         <div className="lg:ml-8 w-full">
           <div className="flex flex-wrap items-center gap-2 mb-4">
             <h3 className="text-xl sm:text-2xl font-bold w-full sm:w-auto mb-2 sm:mb-0">Jenny Peña</h3>
-            <div className="badge badge-primary text-xs">Suzuki-Certified</div>
+            <div className="badge badge-primary text-xs">Suzuki-Registered</div>
             <div className="badge badge-secondary text-xs">Bachelor of Music Degree</div>
             <div className="badge badge-info text-xs">15+ Years</div>
           </div>
