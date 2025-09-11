@@ -1,4 +1,4 @@
-import SignUpScript from '../components/SignUpScript';
+import SignUpScript from '../components/forms/SignUpScript';
 
 export const meta = () => {
   return [

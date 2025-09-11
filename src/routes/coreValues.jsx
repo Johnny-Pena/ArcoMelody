@@ -1,4 +1,4 @@
-import CoreValuesCard from "../components/CoreValuesCard";
+import CoreValuesCard from "../components/cards/CoreValuesCard";
 
 export const meta = () => {
   return [

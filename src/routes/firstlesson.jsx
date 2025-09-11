@@ -1,4 +1,4 @@
-import FirstLessonScript from '../components/FirstLessonComponent';
+import FirstLessonScript from '../components/forms/FirstLessonComponent';
 
 export const meta = () => {
   return [

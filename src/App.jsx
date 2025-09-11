@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import './index.css';
-import Navbar from './components/Navbar.jsx';
-import Footer from './components/Footer.jsx';
+import Navbar from './components/layout/Navbar.jsx';
+import Footer from './components/layout/Footer.jsx';
 import Index from './routes/index.jsx';
 import Bio from './routes/bio.jsx';
 import Contact from './routes/contact.jsx';
@@ -11,7 +11,7 @@ import SignUp from './routes/signUp.jsx';
 import StudioPolicy from './routes/studioPolicy.jsx';
 import AnalyticsTracker from './components/AnalyticsTracker.jsx';
 import CoreValues from './routes/coreValues.jsx';
-import MetaPixel from './ultils/meta/metaPixel.jsx';
+import MetaPixel from './utils/meta/metaPixel.jsx';
 import TestimonialsPage from './routes/testimonialsPage.jsx';
 import FirstLessonPage from './routes/firstlesson.jsx';
 

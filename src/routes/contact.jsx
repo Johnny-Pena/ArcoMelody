@@ -1,4 +1,4 @@
-import ContactForm from "../components/Contactus"; 
+import ContactForm from "../components/forms/Contactus"; 
 
 export const meta = () => {
     return [

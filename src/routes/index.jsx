@@ -1,6 +1,6 @@
-import Hero from "../components/Hero";
-import TrustBadges from "../components/TrustBadges";
-import TestimonialSnippets from "../components/TestimonialSnippets";
+import Hero from "../components/sections/Hero";
+import TrustBadges from "../components/sections/TrustBadges";
+import TestimonialSnippets from "../components/sections/TestimonialSnippets";
 
 export const meta = () => {
   return [

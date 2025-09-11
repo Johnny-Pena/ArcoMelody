@@ -1,9 +1,9 @@
 import LessonsTitlePage from "../components/LessonsTitlePage";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
-import PricingCard from "../components/pricingCard";
-import InstrumentShowcase from "../components/InstrumentShowcase";
-import WhyVirtualWorks from "../components/WhyVirtualWorks";
+import PricingCard from "../components/cards/pricingCard";
+import InstrumentShowcase from "../components/sections/InstrumentShowcase";
+import WhyVirtualWorks from "../components/sections/WhyVirtualWorks";
 
 export const meta = () => {
   return [
