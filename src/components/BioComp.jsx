@@ -18,11 +18,11 @@ export default function BioComp() {
           <div className="flex flex-wrap items-center gap-2 mb-4">
             <h3 className="text-xl sm:text-2xl font-bold w-full sm:w-auto mb-2 sm:mb-0">Jenny Peña</h3>
             <div className="badge badge-primary text-xs">Suzuki-Certified</div>
-            <div className="badge badge-secondary text-xs">B.M. Degree</div>
+            <div className="badge badge-secondary text-xs">Bachelor of Music Degree</div>
             <div className="badge badge-info text-xs">15+ Years</div>
           </div>
           <p className="text-lg font-semibold text-accent mb-3">
-            Violin & Viola • Ages 8-Adult • Music Education Degree
+            Violin & Viola • Ages 8-Adult
           </p>
           <div className="bg-base-200 p-4 rounded-lg mb-4">
             <p className="text-sm italic">
@@ -61,11 +61,12 @@ export default function BioComp() {
       <div className="lg:ml-8 w-full">
         <div className="flex flex-wrap items-center gap-2 mb-4">
           <h3 className="text-xl sm:text-2xl font-bold w-full sm:w-auto mb-2 sm:mb-0">Johnny Peña</h3>
-          <div className="badge badge-primary text-xs">Master's Degree</div>
+          <div className="badge badge-primary text-xs">Master of Music Degree</div>
           <div className="badge badge-secondary text-xs">15+ Years</div>
+          <div className="badge badge-info text-xs">Competition Winner</div>
         </div>
         <p className="text-lg font-semibold text-accent mb-3">
-          Classical Guitar, Electric Guitar, and Ukulele • Ages 8-Adult • Competition Winner
+          Classical Guitar, Electric Guitar, and Ukulele • Ages 8-Adult
         </p>
         <div className="bg-base-200 p-4 rounded-lg mb-4">
           <p className="text-sm italic">
