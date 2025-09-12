@@ -27,7 +27,6 @@ export default function LessonsTitlePage() {
             <li><strong>Personalized curriculum</strong> tailored to your goals</li>
             <li><strong>Flexible scheduling</strong> that fits your lifestyle</li>
             <li><strong>Play your favorite songs</strong> alongside classical training</li>
-            <li><strong>Record lessons</strong> for practice at home</li>
           </ul>
           
           <div className="card-actions justify-center">
