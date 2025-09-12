@@ -55,7 +55,7 @@ export default function Navbar() {
               <li role="menuitem"><Link to="/teacher-bios" className="text-xl font-bold">Teacher Bios</Link></li>
               <li role="menuitem"><Link to="/core-values" className="text-xl font-bold">Core Values</Link></li>
               <li role="menuitem"><Link to="/testimonials" className="text-xl font-bold">Testimonials</Link></li>
-              <li role="menuitem"><a className="text-xl font-bold" href="https://shop.arcomelody.com" target="_blank" rel="noopener noreferrer">Merch</a></li>
+              <li role="menuitem" className="hidden"><a className="text-xl font-bold" href="https://shop.arcomelody.com" target="_blank" rel="noopener noreferrer">Merch</a></li>
               <li role="menuitem"><Link to="/contact" className="text-xl font-bold">Contact</Link></li>
             </ul>
           </div>
@@ -76,7 +76,7 @@ export default function Navbar() {
             <li role="menuitem"><Link to="/teacher-bios">Teacher Bios</Link></li>
             <li role="menuitem"><Link to="/core-values">Core Values</Link></li>
             <li role="menuitem"><Link to="/testimonials">Testimonials</Link></li>
-            <li role="menuitem">
+            <li role="menuitem" className="hidden">
             <a href="https://shop.arcomelody.com" target="_blank" rel="noopener noreferrer">Merch</a>
             </li>
             <li role="menuitem"><Link to="/contact">Contact</Link></li>
