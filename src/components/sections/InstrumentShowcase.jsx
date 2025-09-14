@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const instruments = [
@@ -39,9 +39,9 @@ export default function InstrumentShowcase() {
         {instruments.map((item) => {
           const isSelected = selected === item.slug;
           return (
-            <article
+            <button
               key={item.slug}
-              role="button"
+              type="button"
               tabIndex={0}
               onClick={() => onCardSelect(item.slug)}
               onKeyDown={(e) => {
@@ -54,6 +54,7 @@ export default function InstrumentShowcase() {
               className={`card cursor-pointer transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary ${
                 isSelected ? "ring-2 ring-primary/30 shadow-lg scale-[1.02]" : "hover:shadow-lg"
               }`}
+              style={{ background: "none", border: "none", padding: 0, textAlign: "inherit" }}
             >
               <div className="p-3 md:p-5 text-center">
                 {/* Mobile compact layout */}
@@ -80,7 +81,7 @@ export default function InstrumentShowcase() {
 
                 </div>
               </div>
-            </article>
+            </button>
           );
         })}
       </div>

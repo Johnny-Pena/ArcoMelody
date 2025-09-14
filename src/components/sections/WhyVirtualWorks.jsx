@@ -1,3 +1,48 @@
+import { useState } from 'react';
+
+function TestimonialCard({ name, description, instrument, preview, full, source, avatar }) {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <div className="card bg-base-100 shadow-lg">
+      <div className="card-body">
+        <div className="flex items-center mb-4">
+          <div className="avatar placeholder hidden">
+            <div className="bg-primary text-primary-content rounded-full w-12">
+              <span className="text-xl">{avatar}</span>
+            </div>
+          </div>
+          <div className="ml-3">
+            <h4 className="font-semibold">{name}</h4>
+            <p className="text-xs opacity-70">{instrument}</p>
+          </div>
+        </div>
+        <p className="italic text-sm">
+          {expanded ? full : preview}
+        </p>
+        <button
+          onClick={() => setExpanded((v) => !v)}
+          className="text-primary text-xs mt-2 hover:underline self-start"
+        >
+          {expanded ? 'Read less' : 'Read full review'}
+        </button>
+        <div className="rating rating-sm mt-3">
+          {[...Array(5)].map((_, i) => (
+            <input
+              key={i}
+              type="radio"
+              className="mask mask-star-2 bg-yellow-400"
+              disabled
+              checked
+            />
+          ))}
+        </div>
+        <p className="text-xs opacity-60 mt-2">
+          — {description} • {source}
+        </p>
+      </div>
+    </div>
+  );
+}
 export default function WhyVirtualWorks() {
   return (
     <div className="w-full max-w-6xl mx-auto py-16 bg-base-100 rounded-lg shadow-lg my-8">
@@ -51,21 +96,30 @@ export default function WhyVirtualWorks() {
         <div className="mt-12 bg-base-200 rounded-lg p-6">
           <h3 className="text-xl font-bold text-center mb-6">Student Success Stories</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-base-100 p-4 rounded-lg">
-              <p className="italic mb-2">
-                "My daughter has been taking virtual violin lessons for 8 months and her progress has been amazing. 
-                The ability to record lessons means she can practice exactly what Jenny taught her."
-              </p>
-              <p className="text-sm font-semibold">- Sarah M., Parent</p>
-            </div>
-            <div className="bg-base-100 p-4 rounded-lg">
-              <p className="italic mb-2">
-                "Mr. Pena is not only an amazing teacher but also a gifted musician. He is very kind, friendly and has been great at assessing our son's interests to continuously keep him motivated. We highly recommend him!"
-              </p>
-              <p className="text-sm font-semibold">- Rosalinda, Parent</p>
-            </div>
+            {/* Sarah Testimonial Card */}
+            <TestimonialCard
+              name="Sarah"
+              description="Parent, Texas"
+              instrument="Daughter taking violin for 1 year"
+              preview={'"My daughter LOVES her instructor — improved tremendously in 3 months!"'}
+              full={'"My daughter LOVES her instructor and playing the violin! My daughter has improved tremendously. I like how sometimes my daughter can request songs that she wants to learn based on the music she likes. This is a wonderful program!"'}
+              source="Google review"
+              avatar="S"
+            />
+            {/* Rosalinda Testimonial Card */}
+            <TestimonialCard
+              name="Rosalinda"
+              description="Parent, Texas"
+              instrument="Son and daughter taking guitar for 11 years"
+              preview={'"Mr. Pena is an amazing teacher and gifted musician. Very kind and keeps our son motivated!"'}
+              full={'"Mr. Pena is not only an amazing teacher but also a gifted musician. He is very kind, friendly and has been great at assessing our son\'s interests to continuously keep him motivated. We highly recommend him!"'}
+              source="Direct testimonial"
+              avatar="R"
+            />
           </div>
         </div>
+
+          </div>
 
         {/* CTA */}
         <div className="text-center mt-12">
@@ -74,7 +128,6 @@ export default function WhyVirtualWorks() {
             Book Your Free Trial Now
           </a>
         </div>
-      </div>
     </div>
   );
 }

@@ -19,8 +19,8 @@ export default function FirstLessonScript() {
         src="https://app.acuityscheduling.com/schedule.php?owner=33858208&appointmentType=79150807"
         width="100%"
         height="800"
-        frameBorder="0"
         title="Meet and Greet Scheduling"
+        style={{ border: 0 }}
       ></iframe>
     </div>
   );

@@ -15,8 +15,8 @@ export default function SignUpScript() {
         src="https://app.acuityscheduling.com/catalog.php?owner=33858208"
         width="100%"
         height="800"
-        frameBorder="0"
-        style={{ maxHeight: 'none', overflow: 'hidden', height: '1567px !important' }}
+        title="Acuity Scheduling Catalog"
+        style={{ maxHeight: 'none', overflow: 'hidden', height: '1567px !important', border: 0 }}
       ></iframe>
     </div>
   );
