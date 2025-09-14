@@ -40,7 +40,7 @@ export default function TestimonialSnippets() {
       instrument: "Violin for 2 years",
       preview: '"Jenny has helped me grow as a musician starting at age 48. I really cannot say enough about her!"',
       full: '"Jenny has been my violin instructor for the last 2 years and her skills and expertise have really helped me grow as a musician. That is a lot for starting to play a new instrument at age 48. I am 50 now and I take lessons every other week using Google meets and my phone, but a laptop is ideal. I am in New York and she is in Texas, but she always works with me if things come up unexpectedly. I really cannot say enough about her! Thank you for helping me live my dream."',
-      source: "Direct testimonial",
+      source: "Google review",
       date: "",
       avatar: "R"
     }
