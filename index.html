@@ -44,8 +44,10 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-5WXPY9PSN4');
+      // Prevent the automatic page_view so the app controls pageviews for SPA navigation
+      gtag('config', 'G-5WXPY9PSN4', { send_page_view: false });
     </script>
+
   </head>
   <body>
     <div id="root"></div>
