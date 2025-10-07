@@ -94,9 +94,13 @@ export default function Navbar() {
             />
             <span className="mr-2 ml-2">🌚</span>
           </div>
-          <Link to="/first-lesson" className="btn btn-primary ml-2 mr-5 btn-sm animate-pulse">
+          <HashLink 
+            smooth
+            to="/#booking" 
+            className="btn btn-primary ml-2 mr-5 btn-sm animate-pulse"
+          >
             📞 Book FREE Trial
-          </Link>
+          </HashLink>
         </div>
       </div>
     </nav>

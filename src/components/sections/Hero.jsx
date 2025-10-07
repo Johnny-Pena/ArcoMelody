@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import FreeTrialBookingFlow from "../forms/FreeTrialBookingFlow";
 
 export default function Hero() {
   return (
-    <div className="hero bg-base-100 min-h-[80vh] sm:min-h-screen pt-20 sm:pt-24">
+    <div id="booking" className="hero bg-base-100 min-h-[80vh] sm:min-h-screen pt-20 sm:pt-24">
       <div className="hero-content flex-col lg:flex-row-reverse max-w-6xl mx-auto px-4">
 
         {/* PHOTO CARD (first in DOM for desktop right-side display) */}
@@ -43,14 +44,11 @@ export default function Hero() {
             Experienced teachers • Tailored lesson plans • Free 20-minute trial
           </p>
 
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <Link 
-              to="/first-lesson" 
-              className="btn btn-primary btn-lg"
-              role="button"
-            >
-              Book Your Free 20-Min Trial
-            </Link>
+          <div className="mb-6">
+            <FreeTrialBookingFlow />
+          </div>
+          
+          <div className="flex justify-center">
             <Link 
               to="/lessons" 
               className="btn btn-outline btn-lg"

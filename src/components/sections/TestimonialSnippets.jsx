@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { HashLink } from "react-router-hash-link";
 
 export default function TestimonialSnippets() {
   const [expandedTestimonials, setExpandedTestimonials] = useState({});
@@ -103,9 +104,13 @@ export default function TestimonialSnippets() {
         <div className="text-center mt-12">
           <p className="text-lg mb-6">Ready to start your musical journey?</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/first-lesson" className="btn btn-primary btn-lg">
+            <HashLink
+              smooth
+              to="/#booking"
+              className="btn btn-primary btn-lg"
+            >
               Book Your Free 20-Min Trial
-            </a>
+            </HashLink>
             <a href="/lessons" className="btn btn-outline btn-lg">
               View All Lesson Options
             </a>

@@ -1,103 +1,36 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import FreeTrialBookingFlow from "../forms/FreeTrialBookingFlow";
 
 const instruments = [
-  { slug: "violin", title: "Violin", icon: "🎻", subtitle: "Classical & Contemporary", teacher: "Jenny Peña" },
-  { slug: "viola", title: "Viola", icon: "🎻", subtitle: "Classical & Contemporary", teacher: "Jenny Peña" },
-  { slug: "guitar", title: "Guitar", icon: "🎸", subtitle: "Classical & Electric", teacher: "Johnny Peña" },
-  { slug: "ukulele", title: "Ukulele", icon: "🎼", subtitle: "Classical & Contemporary", teacher: "Johnny Peña" },
+  { title: "Violin", icon: "🎻", subtitle: "Classical & Contemporary" },
+  { title: "Viola", icon: "🎻", subtitle: "Classical & Contemporary" },
+  { title: "Guitar", icon: "🎸", subtitle: "Classical & Electric" },
+  { title: "Ukulele", icon: "🎼", subtitle: "All Styles" },
 ];
 
 export default function InstrumentShowcase() {
-  const [selected, setSelected] = useState(null); // slug or null
-  const navigate = useNavigate();
-
-  function onCardSelect(slug) {
-    setSelected((s) => (s === slug ? null : slug)); // toggle
-  }
-
-  function onBook() {
-    // If none selected, send user to generic booking page; otherwise pass instrument
-    if (!selected) {
-      navigate("/first-lesson");
-    } else {
-      navigate("/first-lesson", { state: { instrument: selected } });
-    }
-  }
-
   return (
     <section className="w-full max-w-6xl mx-auto py-16">
-      <h2 className="text-3xl font-bold text-center mb-6">Choose Your Instrument</h2>
-      <p className="text-center text-sm opacity-70 mb-8 hidden md:block">
-        Select an instrument to prefill your free trial booking.
-      </p>
-      <p className="text-center text-sm opacity-70 mb-6 block md:hidden">
-        Tap an instrument to select, then book your free trial below.
+      <h2 className="text-3xl font-bold text-center mb-6">We Offer Multiple Instruments</h2>
+      <p className="text-center text-sm opacity-70 mb-8">
+        Choose your instrument when you book your free trial lesson
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
-        {instruments.map((item) => {
-          const isSelected = selected === item.slug;
-          return (
-            <button
-              key={item.slug}
-              type="button"
-              tabIndex={0}
-              onClick={() => onCardSelect(item.slug)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  onCardSelect(item.slug);
-                }
-              }}
-              aria-pressed={isSelected}
-              className={`card cursor-pointer transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary ${
-                isSelected ? "ring-2 ring-primary/30 shadow-lg scale-[1.02]" : "hover:shadow-lg"
-              }`}
-              style={{ background: "none", border: "none", padding: 0, textAlign: "inherit" }}
-            >
-              <div className="p-3 md:p-5 text-center">
-                {/* Mobile compact layout */}
-                <div className="block md:hidden">
-                  <div className="mx-auto w-10 h-10 rounded-full bg-base-200 flex items-center justify-center text-4xl mb-2">
-                    <span aria-hidden="true">{item.icon}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
-                  {isSelected && (
-                    <div className="mt-2 text-xs text-primary font-medium">
-                      ✓ Selected
-                    </div>
-                  )}
-                </div>
-
-                {/* Desktop full layout */}
-                <div className="hidden md:block">
-                  <div className="mx-auto w-14 h-14 rounded-full bg-base-200 flex items-center justify-center text-4xl mb-4">
-                    <span aria-hidden="true">{item.icon}</span>
-                  </div>
-
-                  <h3 className="text-2xl font-semibold">{item.title}</h3>
-                  <p className="text-sm opacity-75 mb-3">{item.subtitle}</p>
-
-                </div>
-              </div>
-            </button>
-          );
-        })}
+      {/* Simple instrument display - no interaction */}
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+        {instruments.map((item) => (
+          <div key={item.title} className="text-center">
+            <div className="mx-auto w-16 h-16 rounded-full bg-base-200 flex items-center justify-center text-4xl mb-3 shadow-sm">
+              <span aria-hidden="true">{item.icon}</span>
+            </div>
+            <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+            <p className="text-sm opacity-75">{item.subtitle}</p>
+          </div>
+        ))}
       </div>
 
-      {/* Global CTA */}
-      <div className="text-center mt-10">
-        <button
-          type="button"
-          onClick={onBook}
-          className="btn btn-primary btn-lg"
-          aria-label={selected ? `Book a free trial for ${selected}` : "Book a free trial"}
-        >
-          {selected ? `Book Free Trial — ${selected[0].toUpperCase() + selected.slice(1)}` : "Book Your Free 20-Min Trial"}
-        </button>
-        <p className="text-sm opacity-70 mt-3 hidden md:block">Not sure? Click any card to preselect or just click Book to choose later.</p>
-        <p className="text-sm opacity-70 mt-3 block md:hidden">No selection? No problem — choose during your trial!</p>
+      {/* Direct booking flow without pre-selection */}
+      <div className="text-center">
+        <FreeTrialBookingFlow />
       </div>
     </section>
   );
