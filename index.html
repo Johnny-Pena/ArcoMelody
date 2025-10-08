@@ -44,8 +44,21 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      // Prevent the automatic page_view so the app controls pageviews for SPA navigation
-      gtag('config', 'G-5WXPY9PSN4', { send_page_view: false });
+      // Configure with cross-domain tracking for Acuity Scheduling
+      gtag('config', 'G-5WXPY9PSN4', {
+        send_page_view: false,
+        linker: {
+          domains: [
+            'arcomelody.com',
+            'arcomelody.pages.dev',
+            'app.acuityscheduling.com',
+            'embed.acuityscheduling.com'
+          ],
+          accept_incoming: true
+        },
+        allow_google_signals: true,
+        cookie_flags: 'SameSite=None;Secure'
+      });
     </script>
 
   </head>
