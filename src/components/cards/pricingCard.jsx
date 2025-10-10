@@ -4,34 +4,34 @@ import { Link } from 'react-router-dom';
 
 const weeklyTiers = [
   {
-    name: 'Weekly Hour Lessons',
-    id: 'tier-hour',
-    href: '/first-lesson',
-    priceMonthly: '$279.99',
-    description: 'Billed monthly',
-  },
-  {
     name: 'Weekly Half Hour Lessons',
     id: 'tier-half-hour',
     href: '/first-lesson',
     priceMonthly: '$159.99',
     description: 'Billed monthly',
   },
+  {
+    name: 'Weekly Hour Lessons',
+    id: 'tier-hour',
+    href: '/first-lesson',
+    priceMonthly: '$279.99',
+    description: 'Billed monthly',
+  },
 ];
 
 const biweeklyTiers = [
-  {
-    name: 'Bi-Weekly One Hour Lessons',
-    id: 'tier-hour',
-    href2: '/first-lesson',
-    priceMonthly: '$139.99',
-    description: 'Billed monthly',
-  },
   {
     name: 'Bi-Weekly Half Hour Lessons',
     id: 'tier-half-hour',
     href: '/first-lesson',
     priceMonthly: '$79.99',
+    description: 'Billed monthly',
+  },
+  {
+    name: 'Bi-Weekly One Hour Lessons',
+    id: 'tier-hour',
+    href2: '/first-lesson',
+    priceMonthly: '$139.99',
     description: 'Billed monthly',
   },
 ];

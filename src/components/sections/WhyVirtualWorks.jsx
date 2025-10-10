@@ -120,14 +120,6 @@ export default function WhyVirtualWorks() {
         </div>
 
           </div>
-
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <h3 className="text-2xl font-bold mb-4">Ready to start your musical journey?</h3>
-          <a href="/first-lesson" className="btn btn-primary btn-lg">
-            Book Your Free Trial Now
-          </a>
-        </div>
     </div>
   );
 }

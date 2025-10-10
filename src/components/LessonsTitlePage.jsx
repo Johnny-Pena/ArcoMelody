@@ -28,14 +28,7 @@ export default function LessonsTitlePage() {
             <li><strong>Flexible scheduling</strong> that fits your lifestyle</li>
             <li><strong>Play your favorite songs</strong> alongside classical training</li>
           </ul>
-          
-          <div className="card-actions justify-center">
-            <Link to="/first-lesson">
-              <button className="btn btn-primary btn-lg animate-pulse">
-                🎵 Start Your FREE Trial Now
-              </button>
-            </Link>
-          </div>
+
           
         </div>
       </div>
