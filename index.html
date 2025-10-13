@@ -7,8 +7,13 @@
     
     <!-- Preload critical resources for faster loading -->
     <link rel="preload" href="/images/jenny-downtown-2025-512.webp" as="image" type="image/webp" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://app.acuityscheduling.com" />
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="dns-prefetch" href="https://embed.acuityscheduling.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <title>Arco Melody - Virtual Violin, Viola, Guitar, and Ukulele Lessons</title>
     <meta name="description" content="Learn violin, viola, guitar or ukulele online with experienced teachers. Personalized virtual lessons for all ages. Book your free 20-minute trial today!">
     <meta name="keywords" content="virtual violin lessons, online guitar lessons, Suzuki method, music lessons, violin teacher, guitar teacher, ukulele teacher, Jenny Peña, Johnny Peña">
@@ -42,27 +47,36 @@
       }
     }
     </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WXPY9PSN4"></script>
+    <!-- Google Analytics - Deferred loading for performance -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      // Load Google Analytics after page is fully loaded
+      window.addEventListener('load', function() {
+        // Create and load gtag script
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-5WXPY9PSN4';
+        document.head.appendChild(script);
+        
+        // Initialize gtag
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      // Configure with cross-domain tracking for Acuity Scheduling
-      gtag('config', 'G-5WXPY9PSN4', {
-        send_page_view: false,
-        linker: {
-          domains: [
-            'arcomelody.com',
-            'arcomelody.pages.dev',
-            'app.acuityscheduling.com',
-            'embed.acuityscheduling.com'
-          ],
-          accept_incoming: true
-        },
-        allow_google_signals: true,
-        cookie_flags: 'SameSite=None;Secure'
+        // Configure with cross-domain tracking for Acuity Scheduling
+        gtag('config', 'G-5WXPY9PSN4', {
+          send_page_view: false,
+          linker: {
+            domains: [
+              'arcomelody.com',
+              'arcomelody.pages.dev',
+              'app.acuityscheduling.com',
+              'embed.acuityscheduling.com'
+            ],
+            accept_incoming: true
+          },
+          allow_google_signals: true,
+          cookie_flags: 'SameSite=None;Secure'
+        });
       });
     </script>
 

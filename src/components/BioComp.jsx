@@ -59,9 +59,14 @@ export default function BioComp() {
     <div className="hero bg-base-100 mb-6">
     <div className="hero-content flex-col lg:flex-row max-w-6xl mx-auto px-4">
       <img
-        src="/images/johnny-pena-headshot.jpg"
+        src="/images/johnny-pena-headshot-512.webp"
+        srcSet="/images/johnny-pena-headshot-256.webp 256w, /images/johnny-pena-headshot-512.webp 512w, /images/johnny-pena-headshot-1024.webp 1024w"
+        sizes="(max-width: 640px) 100vw, 33vw"
         className="w-full rounded-lg shadow-2xl sm:w-1/3"
-        alt="Johnny Headshot"
+        alt="Johnny Peña with classical guitar"
+        loading="lazy"
+        width="512"
+        height="auto"
       />
       <div className="lg:ml-8 w-full">
         <div className="flex flex-wrap items-center gap-2 mb-4">

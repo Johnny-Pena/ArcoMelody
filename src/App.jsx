@@ -11,7 +11,8 @@ import SignUp from './routes/signUp.jsx';
 import StudioPolicy from './routes/studioPolicy.jsx';
 import AnalyticsTracker from './components/AnalyticsTracker.jsx';
 import CoreValues from './routes/coreValues.jsx';
-import MetaPixel from './utils/meta/metaPixel.jsx';
+// Temporarily disabled for performance optimization
+// import MetaPixel from './utils/meta/metaPixel.jsx';
 import TestimonialsPage from './routes/testimonialsPage.jsx';
 import FirstLessonPage from './routes/firstlesson.jsx';
 
@@ -20,7 +21,7 @@ function App() {
 <Router>
   <div>
   <AnalyticsTracker />
-    <MetaPixel />
+    {/* <MetaPixel /> */}
     <Navbar />
     <Routes>
       <Route path="/" element={<Index />} />

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import YouTubeFacade from './YouTubeFacade';
 
 export default function LessonsTitlePage() {
   return (
@@ -6,15 +7,11 @@ export default function LessonsTitlePage() {
       <div className="card lg:card-side bg-base-100 shadow-xl mt-4 lg:w-2/3">
         <div className="flex justify-center items-center p-4">
           <div className="w-full sm:w-3/4 lg:w-[560px] lg:h-[315px]">
-            <iframe
-              className="w-full h-[315px] lg:w-[560px] lg:h-[315px]"
-              src="https://www.youtube.com/embed/WZYjDAODMfA?si=5lIiJDa9I3I3XaH1"
+            <YouTubeFacade
+              videoId="WZYjDAODMfA"
               title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
+              className="w-full h-[315px] lg:w-[560px] lg:h-[315px]"
+            />
           </div>
         </div>
         <div className="card-body">

@@ -1,8 +1,8 @@
 import { lazy, Suspense } from "react";
-import LessonsTitlePage from "../components/LessonsTitlePage";
 import InstrumentShowcase from "../components/sections/InstrumentShowcase";
 
 // Lazy load non-critical components to improve initial load time
+const LessonsTitlePage = lazy(() => import("../components/LessonsTitlePage"));
 const WhyVirtualWorks = lazy(() => import("../components/sections/WhyVirtualWorks"));
 const PricingCard = lazy(() => import("../components/cards/pricingCard"));
 const FAQ = lazy(() => import("../components/FAQ"));
@@ -30,7 +30,9 @@ export default function Lessons() {
                 <h1 className="text-3xl font-bold mb-4 sm:text-5xl">Virtual Music Lessons</h1>
             </div>
             
-            <LessonsTitlePage />    
+            <Suspense fallback={<div className="w-full h-48 animate-pulse bg-base-300 rounded-lg mb-4"></div>}>
+                <LessonsTitlePage />
+            </Suspense>
             <InstrumentShowcase />
             
             {/* Lazy load below-the-fold components */}
