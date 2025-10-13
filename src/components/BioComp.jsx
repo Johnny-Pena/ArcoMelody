@@ -10,9 +10,14 @@ export default function BioComp() {
     <div className="hero bg-base-100">
       <div className="hero-content flex-col lg:flex-row max-w-6xl mx-auto px-4">
         <img
-          src="/images/jennyDowntownAustin.jpg"
+          src="/images/jenny-downtown-2025-512.webp"
+          srcSet="/images/jenny-downtown-2025-256.webp 256w, /images/jenny-downtown-2025-512.webp 512w, /images/jenny-downtown-2025-1024.webp 1024w"
+          sizes="(max-width: 640px) 100vw, 33vw"
           className="w-full rounded-lg shadow-2xl sm:w-1/3"
-          alt="Jenny Headshot"
+          alt="Jenny Peña with violin in downtown Austin"
+          loading="lazy"
+          width="512"
+          height="auto"
         />
         <div className="lg:ml-8 w-full">
           <div className="flex flex-wrap items-center gap-2 mb-4">

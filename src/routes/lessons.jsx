@@ -1,9 +1,11 @@
+import { lazy, Suspense } from "react";
 import LessonsTitlePage from "../components/LessonsTitlePage";
-import Testimonials from "../components/Testimonials";
-import FAQ from "../components/FAQ";
-import PricingCard from "../components/cards/pricingCard";
 import InstrumentShowcase from "../components/sections/InstrumentShowcase";
-import WhyVirtualWorks from "../components/sections/WhyVirtualWorks";
+
+// Lazy load non-critical components to improve initial load time
+const WhyVirtualWorks = lazy(() => import("../components/sections/WhyVirtualWorks"));
+const PricingCard = lazy(() => import("../components/cards/pricingCard"));
+const FAQ = lazy(() => import("../components/FAQ"));
 
 export const meta = () => {
   return [
@@ -30,11 +32,21 @@ export default function Lessons() {
             
             <LessonsTitlePage />    
             <InstrumentShowcase />
-            <WhyVirtualWorks />
+            
+            {/* Lazy load below-the-fold components */}
+            <Suspense fallback={<div className="w-full h-32 animate-pulse bg-base-300 rounded-lg"></div>}>
+                <WhyVirtualWorks />
+            </Suspense>
+            
             <div id="pricing-section" className="pt-16">
-            <PricingCard />
+                <Suspense fallback={<div className="w-full h-48 animate-pulse bg-base-300 rounded-lg"></div>}>
+                    <PricingCard />
+                </Suspense>
             </div>
-            <FAQ /> 
+            
+            <Suspense fallback={<div className="w-full h-64 animate-pulse bg-base-300 rounded-lg"></div>}>
+                <FAQ />
+            </Suspense>
         </div>
     );
 }
