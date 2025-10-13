@@ -15,6 +15,7 @@ import CoreValues from './routes/coreValues.jsx';
 // import MetaPixel from './utils/meta/metaPixel.jsx';
 import TestimonialsPage from './routes/testimonialsPage.jsx';
 import FirstLessonPage from './routes/firstlesson.jsx';
+import ViolinLessons from './routes/violin-lessons.jsx';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Route path="/studio-policy" element={<StudioPolicy />} />
       <Route path="/core-values" element={<CoreValues />} />
       <Route path="/testimonials" element={<TestimonialsPage />} />
+      <Route path="/violin-lessons" element={<ViolinLessons />} />
     </Routes>
     <Footer />
   </div>

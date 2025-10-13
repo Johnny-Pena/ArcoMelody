@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import YouTubeFacade from './YouTubeFacade';
+import YouTubeFacade from '../../YouTubeFacade';
 
-export default function LessonsTitlePage() {
+export default function ViolinTitlePage() {
   return (
     <div className="w-full max-w-6xl mx-auto py-16 bg-base-100 rounded-lg shadow-lg my-8">
       <div className="px-4 md:px-8">
