@@ -16,6 +16,7 @@ const pageTitles = {
   '/studio-policy': 'Studio Policy',
   '/core-values': 'Core Values',
   '/testimonials': 'Testimonials',
+  '/violin-lessons': 'Violin Lessons',
 };
 
 function getTitleForPathname(pathname) {

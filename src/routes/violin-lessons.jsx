@@ -1,8 +1,10 @@
 import { lazy, Suspense } from "react";
+import ViolinTestimonials from "../components/sections/ViolinLandingPage/ViolinTestimonials";
 
 // Lazy load non-critical components to improve initial load time
-const ViolinTitlePage = lazy(() => import("../components/sections/ViolinLandingPage/ViolinTitlePage"));
-const ViolinWhyVirtualViolinWorks = lazy(() => import("../components/sections/ViolinLandingPage/ViolinWhyVirtualWorks"));
+const ViolinTrustBadges = lazy(() => import("../components/sections/ViolinLandingPage/ViolinTrustBadges"));
+const ViolinHero = lazy(() => import("../components/sections/ViolinLandingPage/ViolinHero"));
+const ViolinTestimonialSnippets = lazy(() => import("../components/sections/ViolinLandingPage/ViolinTestimonialSnippets"));
 const PricingCard = lazy(() => import("../components/cards/pricingCard"));
 const FAQ = lazy(() => import("../components/FAQ"));
 
@@ -22,19 +24,18 @@ export const meta = () => {
   
 export default function ViolinLessons() {
     return (
-        <div className="flex flex-col items-center justify-center bg-base-200 mt-1 px-4 w-full">
-            {/* Enhanced Hero Section */}
-            <div className="hero-section text-center max-w-4xl mx-auto pt-16 pb-8">
-                <h1 className="text-3xl font-bold mb-4 sm:text-5xl">Virtual Violin Lessons</h1>
-            </div>
-            
+        <>
             <Suspense fallback={<div className="w-full h-48 animate-pulse bg-base-300 rounded-lg mb-4"></div>}>
-                <ViolinTitlePage />
+                <ViolinHero />
             </Suspense>
             
+            <Suspense fallback={<div className="w-full h-48 animate-pulse bg-base-300 rounded-lg mb-4"></div>}>
+                <ViolinTrustBadges />
+            </Suspense>
+
             {/* Lazy load below-the-fold components */}
             <Suspense fallback={<div className="w-full h-32 animate-pulse bg-base-300 rounded-lg"></div>}>
-                <ViolinWhyVirtualViolinWorks />
+                <ViolinTestimonialSnippets />
             </Suspense>
             
             <div id="pricing-section" className="pt-16">
@@ -46,6 +47,6 @@ export default function ViolinLessons() {
             <Suspense fallback={<div className="w-full h-64 animate-pulse bg-base-300 rounded-lg"></div>}>
                 <FAQ />
             </Suspense>
-        </div>
+        </>
     );
 }

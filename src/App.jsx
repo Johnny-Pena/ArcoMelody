@@ -16,6 +16,7 @@ import CoreValues from './routes/coreValues.jsx';
 import TestimonialsPage from './routes/testimonialsPage.jsx';
 import FirstLessonPage from './routes/firstlesson.jsx';
 import ViolinLessons from './routes/violin-lessons.jsx';
+import PrivacyPolicy from './routes/privacy-policy.jsx';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Route path="/core-values" element={<CoreValues />} />
       <Route path="/testimonials" element={<TestimonialsPage />} />
       <Route path="/violin-lessons" element={<ViolinLessons />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
     </Routes>
     <Footer />
   </div>
