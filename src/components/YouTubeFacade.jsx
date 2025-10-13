@@ -27,16 +27,16 @@ export default function YouTubeFacade({ videoId, title, className }) {
       className={`${className} relative cursor-pointer group overflow-hidden rounded-lg`}
       onClick={handleClick}
     >
-      {/* Thumbnail image */}
+      {/* Thumbnail image - Critical for LCP, load immediately */}
       <img
         src="/images/youtube-video-preview-512.webp"
         srcSet="/images/youtube-video-preview-256.webp 256w, /images/youtube-video-preview-512.webp 512w, /images/youtube-video-preview-1024.webp 1024w"
         sizes="(max-width: 640px) 100vw, 50vw"
         alt="Virtual violin lesson preview - Jenny and Johnny Peña teaching"
         className="w-full h-full object-cover"
-        loading="lazy"
         width="512"
         height="auto"
+        fetchPriority="high"
       />
       
       {/* Play button overlay - centered but not covering entire image */}
