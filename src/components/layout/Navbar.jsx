@@ -51,7 +51,7 @@ export default function Navbar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow mb-14">
               <li role="menuitem"><Link to="/" className="text-xl font-bold">Home</Link></li>
               <li role="menuitem"><Link to="/lessons" className="text-xl font-bold">Lessons</Link></li>
-              <li role="menuitem"><HashLink smooth to="/lessons#pricing-section" className="text-xl font-bold">Pricing</HashLink></li>
+              <li role="menuitem"><Link to="/violin-lessons" className="text-xl font-bold">Violin Lessons</Link></li>
               <li role="menuitem"><Link to="/teacher-bios" className="text-xl font-bold">Teacher Bios</Link></li>
               <li role="menuitem"><Link to="/core-values" className="text-xl font-bold">Core Values</Link></li>
               <li role="menuitem"><Link to="/testimonials" className="text-xl font-bold">Testimonials</Link></li>
@@ -72,7 +72,7 @@ export default function Navbar() {
         <div className="navbar-center hidden xl:flex">
           <ul className="menu menu-horizontal px-1 text-sm font-medium sm:text-lg" role="menubar">
             <li role="menuitem"><Link to="/lessons">Lessons</Link></li>
-            <li role="menuitem"><HashLink smooth to="/lessons#pricing-section">Pricing</HashLink></li>
+            <li role="menuitem"><Link to="/violin-lessons">Violin Lessons</Link></li>
             <li role="menuitem"><Link to="/teacher-bios">Teacher Bios</Link></li>
             <li role="menuitem"><Link to="/core-values">Core Values</Link></li>
             <li role="menuitem"><Link to="/testimonials">Testimonials</Link></li>

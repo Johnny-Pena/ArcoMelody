@@ -3,6 +3,15 @@ import React, { useState } from 'react';
 import ViolinInterestForm from './ViolinInterestForm';
                          
 const ViolinTestimonialSnippets = () => {
+  const [expandedTestimonials, setExpandedTestimonials] = useState({});
+
+  const toggleTestimonial = (id) => {
+    setExpandedTestimonials(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
   const testimonials = [
     {
       id: 1,
@@ -59,8 +68,15 @@ const ViolinTestimonialSnippets = () => {
                     <p className="text-xs opacity-70">{testimonial.instrument}</p>
                   </div>
                 </div>
-                <p className="italic text-sm">{testimonial.preview}</p>
-                <button className="text-primary text-xs mt-2 hover:underline self-start">Read full review</button>
+                <p className="italic text-sm">
+                  {expandedTestimonials[testimonial.id] ? testimonial.full : testimonial.preview}
+                </p>
+                <button 
+                  onClick={() => toggleTestimonial(testimonial.id)}
+                  className="text-primary text-xs mt-2 hover:underline self-start"
+                >
+                  {expandedTestimonials[testimonial.id] ? 'Read less' : 'Read full review'}
+                </button>
                 <div className="rating rating-sm mt-3">
                   {[...Array(5)].map((_, i) => (
                     <input key={i} type="radio" className="mask mask-star-2 bg-yellow-400" disabled checked />
