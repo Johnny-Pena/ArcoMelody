@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 export default function YouTubeFacade({ videoId, title, className }) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [thumbUrl, setThumbUrl] = useState(`/images/youtube-video-preview-img.jpg`);
 
   const handleClick = () => {
     setIsLoaded(true);
@@ -26,16 +25,18 @@ export default function YouTubeFacade({ videoId, title, className }) {
     <div 
       className={`${className} relative cursor-pointer group overflow-hidden rounded-lg`}
       onClick={handleClick}
+      style={{ aspectRatio: '16/9' }}
     >
       {/* Thumbnail image - Critical for LCP, load immediately */}
       <img
-        src="/images/youtube-video-preview-512.webp"
+        src="/images/youtube-video-preview-256.webp"
         srcSet="/images/youtube-video-preview-256.webp 256w, /images/youtube-video-preview-512.webp 512w, /images/youtube-video-preview-1024.webp 1024w"
-        sizes="(max-width: 640px) 100vw, 50vw"
+        sizes="(max-width: 480px) 256px, (max-width: 768px) 512px, 560px"
         alt="Virtual violin lesson preview - Jenny and Johnny Peña teaching"
         className="w-full h-full object-cover"
-        width="512"
-        height="auto"
+        width="256"
+        height="144"
+        style={{ aspectRatio: '16/9' }}
         fetchPriority="high"
       />
       
