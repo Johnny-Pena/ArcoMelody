@@ -1,5 +1,4 @@
 import { lazy, Suspense } from "react";
-import ViolinTestimonials from "../components/sections/ViolinLandingPage/ViolinTestimonials";
 
 // Lazy load non-critical components to improve initial load time
 const ViolinTrustBadges = lazy(() => import("../components/sections/ViolinLandingPage/ViolinTrustBadges"));
