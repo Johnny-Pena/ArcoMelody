@@ -90,9 +90,9 @@ const ViolinTestimonialSnippets = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-lg mb-6">Ready to start your musical journey?</p>
+          <h2 className="text-2xl font-bold text-center mb-12">Ready to start your musical journey?</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a href="/first-lesson" className="btn btn-primary btn-lg">Book Your Free 20-Min Trial</a>
+            <a href="/first-lesson" className="btn btn-primary btn-lg">Click Here to Book Your Free 20-Min Trial</a>
           </div>
 
           <div className="max-w-2xl mx-auto">

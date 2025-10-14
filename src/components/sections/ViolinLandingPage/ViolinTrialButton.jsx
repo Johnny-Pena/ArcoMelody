@@ -13,7 +13,7 @@ export default function ViolinTrialButton() {
               onClick={() => setShowForm(true)}
               className="btn btn-primary btn-xl btn-block"
             >
-              Get Started with Your Free 20-Min Trial
+             Click Here To Claim Your Free 20-Min Trial
             </button>
           </div>
         ) : (

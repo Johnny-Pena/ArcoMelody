@@ -33,7 +33,7 @@ export default function ViolinHero() {
           </div>
           
           <p className="text-sm mt-4 opacity-70">
-            ✓ No experience needed ✓ Flexible scheduling ✓ Ages 8+ Welcome
+            ✓ No experience needed <br />✓ Flexible scheduling <br />✓ Ages 8+ Welcome
           </p>
         </div>
       </div>
