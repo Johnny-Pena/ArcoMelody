@@ -3,18 +3,28 @@ import { useForm, ValidationError } from '@formspree/react';
 export default function ViolinInterestForm() {
   const [state, handleSubmit] = useForm("mblzpzwn");
 
-  const handleFormSubmit = (event) => {
-    // Track form submission in Google Analytics
+  const gtag_report_conversion = (callback) => {
     if (typeof window.gtag === 'function') {
-      window.gtag('event', 'form_submit', {
-        event_category: 'Engagement',
-        event_label: 'Violin Interest Form',
-        form_name: 'violin_interest_form'
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-17649907971/iFzRCMGIja0bEIPykOBB',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
       });
+    } else {
+      // Fallback if gtag is not available
+      callback();
     }
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
     
-    // Call the original Formspree handler directly
-    handleSubmit(event);
+    // Use official Google Ads conversion tracking
+    gtag_report_conversion(() => {
+      // Call the original Formspree handler after conversion is tracked
+      handleSubmit(event);
+    });
   };
 
   if (state.succeeded) {
