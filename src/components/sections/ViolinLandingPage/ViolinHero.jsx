@@ -6,15 +6,15 @@ export default function ViolinHero() {
         {/* Instructor Photo */}
         <div className="lg:w-1/3">
           <img
-            src="/images/jenny-downtown-2025-512.webp"
-            srcSet="/images/jenny-downtown-2025-256.webp 256w, /images/jenny-downtown-2025-512.webp 512w, /images/jenny-downtown-2025-1024.webp 1024w"
-            sizes="(max-width: 640px) 100vw, 33vw"
+            src="/images/jenny-downtown-2025-256.webp"
+            srcSet="/images/jenny-downtown-2025-256.webp 256w, /images/jenny-downtown-2025-512.webp 512w"
+            sizes="(max-width: 640px) 256px, (max-width: 1024px) 348px, 384px"
             className="w-full max-w-sm rounded-lg shadow-2xl mx-auto"
             alt="Jenny Peña - Professional Violin Teacher with violin in downtown Austin"
             loading="eager"
             fetchPriority="high"
-            width="512"
-            height="683"
+            width="348"
+            height="462"
           />
         </div>
         
