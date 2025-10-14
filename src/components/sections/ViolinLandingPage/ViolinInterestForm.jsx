@@ -5,20 +5,26 @@ export default function ViolinInterestForm() {
 
   const handleFormSubmit = (event) => {
     // Track form submission in Google Analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'form_submit', {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'form_submit', {
         event_category: 'Engagement',
         event_label: 'Violin Interest Form',
         form_name: 'violin_interest_form'
       });
+      
+      // Small delay to ensure GA event is sent before form submission
+      event.preventDefault();
+      setTimeout(() => {
+        handleSubmit(event);
+      }, 200);
+    } else {
+      // Fallback if gtag is not available
+      handleSubmit(event);
     }
-    
-    // Call the original Formspree handler
-    handleSubmit(event);
   };
 
   if (state.succeeded) {
-    return <p className="text-center text-green-600 mt-4">Thanks! We'll reach out soon. 🎶</p>;
+    return <p className="text-center text-green-600 mt-4">Thanks! We'll reach out within the next 24 hours. Please reach out to us again at info@arcomelody.com if you need anything else. 🎶</p>;
   }
 
   return (
