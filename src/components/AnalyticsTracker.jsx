@@ -6,17 +6,18 @@ import { useLocation } from 'react-router-dom';
 const MEASUREMENT_ID = import.meta.env.VITE_MEASUREMENT_ID;
 
 const pageTitles = {
-  '/': 'Home',
-  '/teacher-bios': 'Teacher Bios',
-  '/contact': 'Contact',
-  '/lessons': 'Lessons',
-  '/signup': 'Sign Up',
-  '/first-lesson': 'Free Trial Lesson',
-  '/firstlesson': 'Free Trial Lesson',
-  '/studio-policy': 'Studio Policy',
-  '/core-values': 'Core Values',
-  '/testimonials': 'Testimonials',
-  '/violin-lessons': 'Violin Lessons',
+  '/': 'Home - Arco Melody Virtual Music Lessons',
+  '/teacher-bios': 'Teacher Bios - Meet Our Instructors',
+  '/contact': 'Contact Us - Arco Melody',
+  '/lessons': 'Lessons - Virtual Music Instruction',
+  '/signup': 'Sign Up - Book Your Lesson',
+  '/first-lesson': 'Free Trial Lesson - Start Learning Today',
+  '/firstlesson': 'Free Trial Lesson - Start Learning Today',
+  '/studio-policy': 'Studio Policy - Arco Melody',
+  '/core-values': 'Core Values - Our Teaching Philosophy',
+  '/testimonials': 'Student Testimonials - Success Stories',
+  '/violin-lessons': 'Virtual Violin Lessons with Jenny Peña',
+  '/privacy-policy': 'Privacy Policy - Arco Melody',
 };
 
 function getTitleForPathname(pathname) {
@@ -54,36 +55,24 @@ export default function AnalyticsTracker() {
 
       if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
         try {
-          window.gtag('config', MEASUREMENT_ID, {
-            page_path: path,
-            page_title: title,
-            page_location: window.location.href,
-          });
+          // Send page view event for SPA navigation
           window.gtag('event', 'page_view', {
-            send_to: MEASUREMENT_ID,
-            page_path: path,
             page_title: title,
             page_location: window.location.href,
+            page_path: path,
           });
+          
+          console.log(`[AnalyticsTracker] Page view sent: ${path} - ${title}`);
         } catch (err) {
           console.error('[AnalyticsTracker] gtag error', err);
         }
         return;
       }
 
-      if (typeof window !== 'undefined' && Array.isArray(window.dataLayer)) {
-        window.dataLayer.push({
-          event: 'pageview',
-          page_path: path,
-          page_title: title,
-          page_location: window.location.href,
-        });
-        return;
-      }
-
+      // Retry if gtag is not ready yet
       attempts += 1;
       if (attempts >= maxAttempts) {
-        console.warn('[AnalyticsTracker] analytics unavailable after retries — pageview not sent', { path });
+        console.warn('[AnalyticsTracker] gtag unavailable after retries — pageview not sent', { path });
         return;
       }
       setTimeout(trySend, delay);

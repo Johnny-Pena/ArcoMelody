@@ -49,36 +49,28 @@
       }
     }
     </script>
-    <!-- Google Analytics - Deferred loading for performance -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WXPY9PSN4"></script>
     <script>
-      // Load Google Analytics after page is fully loaded
-      window.addEventListener('load', function() {
-        // Create and load gtag script
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-5WXPY9PSN4';
-        document.head.appendChild(script);
-        
-        // Initialize gtag
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;  // Make gtag globally available
+      gtag('js', new Date());
 
-        // Configure with cross-domain tracking for Acuity Scheduling
-        gtag('config', 'G-5WXPY9PSN4', {
-          send_page_view: false,
-          linker: {
-            domains: [
-              'arcomelody.com',
-              'arcomelody.pages.dev',
-              'app.acuityscheduling.com',
-              'embed.acuityscheduling.com'
-            ],
-            accept_incoming: true
-          },
-          allow_google_signals: true,
-          cookie_flags: 'SameSite=None;Secure'
-        });
+      // Configure with cross-domain tracking for Acuity Scheduling
+      gtag('config', 'G-5WXPY9PSN4', {
+        send_page_view: false,  // Disabled for SPA - we'll track manually
+        linker: {
+          domains: [
+            'arcomelody.com',
+            'arcomelody.pages.dev',
+            'app.acuityscheduling.com',
+            'embed.acuityscheduling.com'
+          ],
+          accept_incoming: true
+        },
+        allow_google_signals: true,
+        cookie_flags: 'SameSite=None;Secure'
       });
     </script>
 
