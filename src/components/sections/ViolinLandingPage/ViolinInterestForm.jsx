@@ -11,16 +11,10 @@ export default function ViolinInterestForm() {
         event_label: 'Violin Interest Form',
         form_name: 'violin_interest_form'
       });
-      
-      // Small delay to ensure GA event is sent before form submission
-      event.preventDefault();
-      setTimeout(() => {
-        handleSubmit(event);
-      }, 200);
-    } else {
-      // Fallback if gtag is not available
-      handleSubmit(event);
     }
+    
+    // Call the original Formspree handler directly
+    handleSubmit(event);
   };
 
   if (state.succeeded) {
