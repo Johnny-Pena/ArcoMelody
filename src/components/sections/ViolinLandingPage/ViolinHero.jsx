@@ -12,8 +12,9 @@ export default function ViolinHero() {
             className="w-full max-w-sm rounded-lg shadow-2xl mx-auto"
             alt="Jenny Peña - Professional Violin Teacher with violin in downtown Austin"
             loading="eager"
+            fetchPriority="high"
             width="512"
-            height="auto"
+            height="683"
           />
         </div>
         
