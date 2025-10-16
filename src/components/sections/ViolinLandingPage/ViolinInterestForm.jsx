@@ -34,9 +34,9 @@ export default function ViolinInterestForm() {
   return (
     <div className="w-full flex justify-center py-8 bg-base-200">
       <div className="card bg-base-100 w-full max-w-md p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold mb-4 text-center">Want to Learn, But Not Ready to Schedule?</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">Share your info and we’ll reach out to schedule a lesson.</h2>
         <p className="text-sm opacity-70 mb-6 text-center">
-          Share your info and we’ll reach out to schedule a lesson.
+          
         </p>
         <form onSubmit={handleFormSubmit}>
           <div className="form-control mb-4">
@@ -58,15 +58,15 @@ export default function ViolinInterestForm() {
           </div>
 
           <div className="form-control mb-4">
-            <label className="label cursor-pointer">
-              <input type="checkbox" name="marketingConsent" required className="checkbox mr-3 scale-100 checkbox-primary" />
-              <span className="label-text text-md">
-                I agree to receive marketing emails from <br /> Arco Melody LLC.
-                <a href="/privacy-policy" className="text-primary underline ml-1" target="_blank" rel="noopener noreferrer">
-                  Privacy Policy
-                </a>
-              </span>
-            </label>
+              <label className="label cursor-pointer">
+                <input type="checkbox" name="marketingConsent" className="checkbox mr-3 scale-100 checkbox-primary" />
+                <span className="label-text text-md">
+                  I agree to receive marketing emails from <br /> Arco Melody LLC.
+                  <a href="/privacy-policy" className="text-primary underline ml-1" target="_blank" rel="noopener noreferrer">
+                    Privacy Policy
+                  </a>
+                </span>
+              </label>
           </div>
 
           <p className="text-xs opacity-70 mb-4">
