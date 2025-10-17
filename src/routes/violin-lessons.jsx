@@ -6,6 +6,7 @@ const ViolinHero = lazy(() => import("../components/sections/ViolinLandingPage/V
 const ViolinTrialButton = lazy(() => import("../components/sections/ViolinLandingPage/ViolinTrialButton"));
 const ViolinTestimonialSnippets = lazy(() => import("../components/sections/ViolinLandingPage/ViolinTestimonialSnippets"));
 const PricingCard = lazy(() => import("../components/cards/pricingCard"));
+const ViolinPhoneCTA = lazy(() => import("../components/sections/ViolinLandingPage/ViolinPhoneCTA"));
 const FAQ = lazy(() => import("../components/FAQ"));
 
 export const meta = () => {
@@ -48,6 +49,11 @@ export default function ViolinLessons() {
                     <PricingCard />
                 </Suspense>
             </div>
+
+            {/* Phone CTA for additional lead conversion after pricing */}
+            <Suspense fallback={<div className="w-full h-32 animate-pulse bg-base-300 rounded-lg"></div>}>
+                <ViolinPhoneCTA />
+            </Suspense>
             
             <Suspense fallback={<div className="w-full h-64 animate-pulse bg-base-300 rounded-lg"></div>}>
                 <FAQ />
