@@ -19,7 +19,7 @@ export default function ViolinPhoneCTA() {
         
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-3">
           <a
-            href="sms:+15122229644?body=Hi! I'm interested in violin lessons and have questions about pricing."
+            href="sms:+15122229644?body=Hi! Contacting Arco Melody about violin lessons."
             className="btn btn-primary btn-lg inline-flex items-center justify-center gap-2"
             aria-label="Text Arco Melody at (512) 222-9644"
             onClick={() => handleContactClick('text')}
