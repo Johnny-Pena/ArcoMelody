@@ -9,6 +9,24 @@ export default function ViolinPhoneCTA() {
     }
   };
 
+  // Google Ads call conversion function
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) !== 'undefined') {
+        window.location = url;
+      }
+    };
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-17649907971/cHa0CM-K0rAbEIPykOBB',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+    }
+    return false;
+  }
+
   return (
     <div className="max-w-4xl mx-auto px-4 mt-8">
       <div className="bg-base-100 rounded-lg shadow-lg p-6 text-center border border-primary/20">
@@ -19,7 +37,7 @@ export default function ViolinPhoneCTA() {
         
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-3">
           <a
-            href="sms:+15122229644?body=Hi! Contacting Arco Melody about violin lessons."
+            href="sms:+15122229644?body=Contacting Arco Melody about violin lessons."
             className="btn btn-primary btn-lg inline-flex items-center justify-center gap-2"
             aria-label="Text Arco Melody at (512) 222-9644"
             onClick={() => handleContactClick('text')}
@@ -32,7 +50,10 @@ export default function ViolinPhoneCTA() {
             href="tel:+15122229644"
             className="btn btn-outline btn-lg inline-flex items-center justify-center gap-2"
             aria-label="Call Arco Melody at (512) 222-9644"
-            onClick={() => handleContactClick('call')}
+            onClick={e => {
+              handleContactClick('call');
+              gtag_report_conversion('tel:+15122229644');
+            }}
           >
             <span className="text-xl">📞</span>
             <span>Call (512) 222-9644</span>
