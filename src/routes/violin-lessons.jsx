@@ -3,7 +3,7 @@ import { lazy, Suspense } from "react";
 // Lazy load non-critical components to improve initial load time
 const ViolinTrustBadges = lazy(() => import("../components/sections/ViolinLandingPage/ViolinTrustBadges"));
 const ViolinHero = lazy(() => import("../components/sections/ViolinLandingPage/ViolinHero"));
-const ViolinTrialButton = lazy(() => import("../components/sections/ViolinLandingPage/ViolinTrialButton"));
+const ViolinInterestForm = lazy(() => import("../components/sections/ViolinLandingPage/ViolinInterestForm"));
 const ViolinTestimonialSnippets = lazy(() => import("../components/sections/ViolinLandingPage/ViolinTestimonialSnippets"));
 const PricingCard = lazy(() => import("../components/cards/pricingCard"));
 const ViolinPhoneCTA = lazy(() => import("../components/sections/ViolinLandingPage/ViolinPhoneCTA"));
@@ -32,7 +32,7 @@ export default function ViolinLessons() {
             </Suspense>
             
             <Suspense fallback={<div className="w-full h-24 animate-pulse bg-base-300 rounded-lg mb-4"></div>}>
-                <ViolinTrialButton />
+                <ViolinInterestForm />
             </Suspense>
             
             <Suspense fallback={<div className="w-full h-48 animate-pulse bg-base-300 rounded-lg mb-4"></div>}>

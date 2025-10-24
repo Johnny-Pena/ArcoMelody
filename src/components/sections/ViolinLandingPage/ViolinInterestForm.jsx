@@ -45,11 +45,7 @@ export default function ViolinInterestForm() {
             <ValidationError prefix="First Name" field="firstName" errors={state.errors} />
           </div>
 
-          <div className="form-control mb-4">
-            <label className="label"><span className="label-text">Last Name*</span></label>
-            <input type="text" name="lastName" className="input input-bordered w-full" required />
-            <ValidationError prefix="Last Name" field="lastName" errors={state.errors} />
-          </div>
+          {/* Last Name field removed as it's not needed */}
 
           <div className="form-control mb-4">
             <label className="label"><span className="label-text">Email*</span></label>
