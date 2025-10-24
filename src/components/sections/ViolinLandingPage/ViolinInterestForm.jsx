@@ -3,41 +3,38 @@ import { useForm, ValidationError } from '@formspree/react';
 export default function ViolinInterestForm() {
   const [state, handleSubmit] = useForm("mblzpzwn");
 
-  const gtag_report_conversion = (callback) => {
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    
+    // Submit form first, then track conversion to avoid blocking
+    handleSubmit(event);
+    
+    // Track conversion asynchronously without blocking form submission
     try {
-      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-        // Use setTimeout to ensure DOM is ready and avoid null reference errors
-        setTimeout(() => {
+      if (typeof window !== 'undefined' && 
+          typeof window.gtag === 'function' && 
+          document.readyState === 'complete') {
+        
+        // Use requestAnimationFrame to ensure gtag runs after DOM updates
+        requestAnimationFrame(() => {
           try {
             window.gtag('event', 'conversion', {
               'send_to': 'AW-17649907971/iFzRCMGIja0bEIPykOBB',
               'value': 1.0,
-              'currency': 'USD',
-              'event_callback': callback
+              'currency': 'USD'
+              // Removed event_callback to avoid DOM timing issues
             });
-          } catch (error) {
-            console.warn('Google Ads conversion tracking error:', error);
-            callback(); // Continue with form submission even if gtag fails
+            console.log('Google Ads conversion tracked successfully');
+          } catch (gtagError) {
+            console.warn('Google Ads conversion tracking failed:', gtagError);
+            // Form submission already completed, so this doesn't affect user experience
           }
-        }, 100);
-      } else {
-        // Fallback if gtag is not available
-        callback();
+        });
       }
     } catch (error) {
       console.warn('Conversion tracking setup error:', error);
-      callback(); // Continue with form submission
+      // Form submission already completed, so this doesn't affect user experience
     }
-  };
-
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    
-    // Use Google Ads conversion tracking with error handling
-    gtag_report_conversion(() => {
-      // Call the original Formspree handler after conversion is tracked
-      handleSubmit(event);
-    });
   };
 
   if (state.succeeded) {
