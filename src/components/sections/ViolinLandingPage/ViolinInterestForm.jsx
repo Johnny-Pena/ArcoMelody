@@ -4,23 +4,36 @@ export default function ViolinInterestForm() {
   const [state, handleSubmit] = useForm("mblzpzwn");
 
   const gtag_report_conversion = (callback) => {
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'conversion', {
-        'send_to': 'AW-17649907971/iFzRCMGIja0bEIPykOBB',
-        'value': 1.0,
-        'currency': 'USD',
-        'event_callback': callback
-      });
-    } else {
-      // Fallback if gtag is not available
-      callback();
+    try {
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        // Use setTimeout to ensure DOM is ready and avoid null reference errors
+        setTimeout(() => {
+          try {
+            window.gtag('event', 'conversion', {
+              'send_to': 'AW-17649907971/iFzRCMGIja0bEIPykOBB',
+              'value': 1.0,
+              'currency': 'USD',
+              'event_callback': callback
+            });
+          } catch (error) {
+            console.warn('Google Ads conversion tracking error:', error);
+            callback(); // Continue with form submission even if gtag fails
+          }
+        }, 100);
+      } else {
+        // Fallback if gtag is not available
+        callback();
+      }
+    } catch (error) {
+      console.warn('Conversion tracking setup error:', error);
+      callback(); // Continue with form submission
     }
   };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
     
-    // Use official Google Ads conversion tracking
+    // Use Google Ads conversion tracking with error handling
     gtag_report_conversion(() => {
       // Call the original Formspree handler after conversion is tracked
       handleSubmit(event);
