@@ -62,21 +62,12 @@ export default function ViolinInterestForm() {
             <input type="email" name="email" className="input input-bordered w-full" required />
             <ValidationError prefix="Email" field="email" errors={state.errors} />
           </div>
-
-          <div className="form-control mb-4">
-              <label className="label cursor-pointer">
-                <input type="checkbox" name="marketingConsent" className="checkbox mr-3 scale-100 checkbox-primary" />
-                <span className="label-text text-md">
-                  I agree to receive marketing emails from <br /> Arco Melody LLC.
-                  <a href="/privacy-policy" className="text-primary underline ml-1" target="_blank" rel="noopener noreferrer">
-                    Privacy Policy
-                  </a>
-                </span>
-              </label>
-          </div>
-
+          
           <p className="text-xs opacity-70 mb-4">
-            By clicking Submit, you consent to allow Arco Melody LLC to store and process the personal information submitted above to provide you content and marketing communications.
+            By clicking <strong>Submit</strong>, you agree to be contacted by Arco Melody LLC about a free music lesson. Read our
+            <a href="/privacy-policy" className="text-primary underline ml-1" target="_blank" rel="noopener noreferrer">
+              Privacy Policy
+            </a>.
           </p>
 
           <button type="submit" className="btn btn-primary w-full" disabled={state.submitting}>
