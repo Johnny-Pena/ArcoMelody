@@ -1,58 +1,54 @@
 export default function ViolinHero() {
-
   return (
-    <div className="hero bg-base-100 min-h-[40vh] sm:min-h-[50vh] lg:min-h-[70vh] pt-16 lg:pt-20">
-      <div className="hero-content flex-col-reverse lg:flex-row max-w-6xl mx-auto px-4 pb-4">
-        {/* Content - appears first on mobile for better conversion */}
-        <div className="lg:w-2/3 lg:pr-8 text-center lg:text-left">
-          <h1 className="text-2xl font-bold mb-3 lg:text-5xl">
+    <div className="w-full bg-base-100 py-8 lg:py-12">
+      <div className="w-full max-w-none px-4">
+        
+        {/* Content Section - Full Width */}
+        <div className="w-full text-center lg:text-left">
+          {/* Header */}
+          <h1 className="text-2xl font-bold mb-3 lg:text-4xl">
             Virtual Violin Lessons with Jenny Peña
           </h1>
+          
+          {/* Credential Badges - hidden on mobile, visible on lg+ */}
+          <div className="hidden lg:flex flex-wrap justify-start gap-2 mb-6">
+            <div className="badge badge-info text-sm font-semibold">Suzuki-Registered</div>
+            <div className="badge badge-secondary text-sm font-semibold">Bachelor of Music Degree</div>
+            <div className="badge badge-success text-sm font-semibold">15+ Years Experience</div>
+          </div>
+          
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-1 mb-3 lg:gap-2 lg:mb-6">
-            <div className="badge badge-info text-md font-semibold">Suzuki-Registered</div>
-            <div className="badge badge-secondary text-md font-semibold">Bachelor of Music Degree</div>
-            <div className="badge badge-success text-md font-semibold">15+ Years Experience</div>
-            </div>
-
-          <p className="text-base mb-3 text-left lg:text-xl text-left lg:mb-6">
+          {/* Description */}
+          <p className="text-base mb-3 lg:text-xl lg:mb-6">
             Learn violin online with a <strong>Suzuki-registered teacher</strong> who has 15+ years of experience teaching students of all ages.
           </p>
           
- 
-          
-          <p className="text-xs opacity-70 mb-3 text-left lg:text-left text-sm lg:mb-0">
-            ✓ No experience needed <br />✓ Flexible scheduling <br />✓ Ages 8+ Welcome
+          {/* Key Benefits */}
+          <p className="text-sm mb-3 lg:text-base lg:mb-6 opacity-70">
+            ✓ <strong>No experience needed</strong> <br />
+            ✓ <strong>Flexible scheduling</strong> <br />
+            ✓ <strong>Ages 8+ Welcome</strong>
           </p>
 
-          {/* Mobile scroll hint - only visible on small screens */}
-          <div className="block lg:hidden text-center mt-2">
+                  {/* Instructor Photo */}
+  <div className="w-full mb-4 flex justify-center">
+            <img
+              src="/images/jenny-downtown-smartphone.jpg"
+              className="w-48 max-w-xs lg:w-56 lg:max-w-sm rounded-lg shadow-2xl"
+              alt="Jenny Peña - Professional Violin Teacher with violin in downtown Austin"
+              loading="eager"
+              fetchPriority="high"
+            />
+        </div>
+          
+          {/* Mobile scroll hint */}
+          <div className="block lg:hidden text-center mt-4">
             <p className="text-sm text-primary font-medium">
               👇 Get your free trial below!
             </p>
           </div>
         </div>
         
-        {/* Instructor Photo - appears second on mobile, smaller size */}
-        <div className="lg:w-1/3 mb-4 lg:mb-0">
-          <picture>
-            <source
-              srcSet="/images/jenny-downtown-smartphone.jpg"
-              media="(max-width: 640px)"
-            />
-            <img
-              src="/images/jenny-downtown-2025-256.webp"
-              srcSet="/images/jenny-downtown-2025-256.webp 256w, /images/jenny-downtown-2025-512.webp 512w"
-              sizes="(max-width: 640px) 180px, (max-width: 1024px) 348px, 384px"
-              className="w-40 max-w-xs lg:w-full lg:max-w-sm rounded-lg shadow-2xl mx-auto"
-              alt="Jenny Peña - Professional Violin Teacher with violin in downtown Austin"
-              loading="eager"
-              fetchPriority="high"
-              width="348"
-              height="462"
-            />
-          </picture>
-        </div>
       </div>
     </div>
   );
