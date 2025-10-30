@@ -26,7 +26,7 @@ export default function TestimonialSnippets() {
       id: 2,
       name: "Rosalinda",
       description: "Parent, Texas", 
-      instrument: "Son and daughter taking guitar for 11 years",
+      instrument: "Son taking guitar for 11 years",
       preview: '"Mr. Pena is an amazing teacher and gifted musician. Very kind and keeps our son motivated!"',
       full: '"Mr. Pena is not only an amazing teacher but also a gifted musician. He is very kind, friendly and has been great at assessing our son\'s interests to continuously keep him motivated. We highly recommend him!"',
       source: "Direct testimonial",

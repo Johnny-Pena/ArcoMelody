@@ -22,9 +22,9 @@ export default function BioComp() {
         <div className="lg:ml-8 w-full">
           <div className="flex flex-wrap items-center gap-2 mb-4">
             <h3 className="text-xl sm:text-2xl font-bold w-full sm:w-auto mb-2 sm:mb-0">Jenny Peña</h3>
-            <div className="badge badge-primary text-xs">Suzuki-Registered</div>
-            <div className="badge badge-secondary text-xs">Bachelor of Music Degree</div>
-            <div className="badge badge-info text-xs">15+ Years</div>
+            <div className="badge badge-primary text-md font-semibold">Suzuki-Registered</div>
+            <div className="badge badge-secondary text-md font-semibold">Bachelor of Music Degree</div>
+            <div className="badge badge-info text-md font-semibold">15+ Years</div>
           </div>
           <p className="text-lg font-semibold text-accent mb-3">
             Violin & Viola • Ages 8-Adult
@@ -71,9 +71,9 @@ export default function BioComp() {
       <div className="lg:ml-8 w-full">
         <div className="flex flex-wrap items-center gap-2 mb-4">
           <h3 className="text-xl sm:text-2xl font-bold w-full sm:w-auto mb-2 sm:mb-0">Johnny Peña</h3>
-          <div className="badge badge-primary text-xs">Master of Music Degree</div>
-          <div className="badge badge-secondary text-xs">15+ Years</div>
-          <div className="badge badge-info text-xs">Competition Winner</div>
+          <div className="badge badge-primary text-md font-semibold">Master of Music Degree</div>
+          <div className="badge badge-secondary text-md font-semibold">15+ Years</div>
+          <div className="badge badge-info text-md font-semibold">Competition Winner</div>
         </div>
         <p className="text-lg font-semibold text-accent mb-3">
           Classical Guitar, Electric Guitar, and Ukulele • Ages 8-Adult

@@ -38,21 +38,21 @@ export default function ViolinInterestForm() {
   };
 
   if (state.succeeded) {
-    return <p className="text-center text-green-600 mt-4">Thanks! We'll reach out within the next 24 hours. Please reach out to us again at info@arcomelody.com if you need anything else. 🎶</p>;
+  return <p className="alert alert-success text-center text-2xl text-white mt-4 font-bold">Thanks! We'll reach out within 24 hours to schedule your lesson. If you need anything sooner, contact us at info@arcomelody.com ✅</p>;
   }
 
   return (
     <div className="w-full flex justify-center py-8 bg-base-200">
       <div className="card bg-base-100 w-full max-w-md p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold mb-4 text-center">Share your info and we’ll reach out to schedule a lesson.</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">Schedule a FREE Lesson</h2>
         <p className="text-sm opacity-70 mb-6 text-center">
-          
+          Spots are limited — reserve your FREE lesson and start your musical journey!
         </p>
         <form onSubmit={handleFormSubmit}>
           <div className="form-control mb-4">
-            <label className="label"><span className="label-text">First Name*</span></label>
-            <input type="text" name="firstName" className="input input-bordered w-full" required />
-            <ValidationError prefix="First Name" field="firstName" errors={state.errors} />
+            <label className="label"><span className="label-text">Full Name*</span></label>
+            <input type="text" name="fullName" className="input input-bordered w-full" required />
+            <ValidationError prefix="Full Name" field="fullName" errors={state.errors} />
           </div>
 
           {/* Last Name field removed as it's not needed */}
@@ -64,13 +64,14 @@ export default function ViolinInterestForm() {
           </div>
           
           <p className="text-xs opacity-70 mb-4">
-            By clicking <strong>Submit</strong>, you agree to be contacted by Arco Melody LLC about a free music lesson. Read our
+            By clicking <strong>Submit</strong>, you agree to be contacted by Arco Melody LLC about a free music lesson. Please read our
             <a href="/privacy-policy" className="text-primary underline ml-1" target="_blank" rel="noopener noreferrer">
               Privacy Policy
-            </a>.
+            </a>{' '}
+            for more details.
           </p>
 
-          <button type="submit" className="btn btn-primary w-full" disabled={state.submitting}>
+          <button type="submit" className="btn btn-primary w-full text-xl font-bold" disabled={state.submitting}>
             Submit
           </button>
         </form>

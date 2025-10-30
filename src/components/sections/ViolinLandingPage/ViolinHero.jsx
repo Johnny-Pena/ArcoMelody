@@ -10,9 +10,9 @@ export default function ViolinHero() {
           </h1>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-1 mb-3 lg:gap-2 lg:mb-6">
-            <div className="badge badge-info text-xs">Suzuki-Registered</div>
-            <div className="badge badge-secondary text-xs">Bachelor of Music Degree</div>
-            <div className="badge badge-success text-xs">15+ Years Experience</div>
+            <div className="badge badge-info text-md font-semibold">Suzuki-Registered</div>
+            <div className="badge badge-secondary text-md font-semibold">Bachelor of Music Degree</div>
+            <div className="badge badge-success text-md font-semibold">15+ Years Experience</div>
             </div>
 
           <p className="text-base mb-3 text-left lg:text-xl text-left lg:mb-6">
@@ -35,17 +35,23 @@ export default function ViolinHero() {
         
         {/* Instructor Photo - appears second on mobile, smaller size */}
         <div className="lg:w-1/3 mb-4 lg:mb-0">
-          <img
-            src="/images/jenny-downtown-2025-256.webp"
-            srcSet="/images/jenny-downtown-2025-256.webp 256w, /images/jenny-downtown-2025-512.webp 512w"
-            sizes="(max-width: 640px) 180px, (max-width: 1024px) 348px, 384px"
-            className="w-40 max-w-xs lg:w-full lg:max-w-sm rounded-lg shadow-2xl mx-auto"
-            alt="Jenny Peña - Professional Violin Teacher with violin in downtown Austin"
-            loading="eager"
-            fetchPriority="high"
-            width="348"
-            height="462"
-          />
+          <picture>
+            <source
+              srcSet="/images/jenny-downtown-smartphone.jpg"
+              media="(max-width: 640px)"
+            />
+            <img
+              src="/images/jenny-downtown-2025-256.webp"
+              srcSet="/images/jenny-downtown-2025-256.webp 256w, /images/jenny-downtown-2025-512.webp 512w"
+              sizes="(max-width: 640px) 180px, (max-width: 1024px) 348px, 384px"
+              className="w-40 max-w-xs lg:w-full lg:max-w-sm rounded-lg shadow-2xl mx-auto"
+              alt="Jenny Peña - Professional Violin Teacher with violin in downtown Austin"
+              loading="eager"
+              fetchPriority="high"
+              width="348"
+              height="462"
+            />
+          </picture>
         </div>
       </div>
     </div>
