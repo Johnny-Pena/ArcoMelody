@@ -8,7 +8,7 @@ export default function HeroWithForm() {
       {/* Outer container: centers content, uses full viewport height on desktop */}
       <div className="max-w-6xl mx-auto px-4 py-8 lg:py-16">
         {/* Grid: 1 column on mobile, 2 columns on lg+ */}
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[80vh]">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[80vh] max-h-[900px]">
           {/* Column A: Hero content (left on desktop) */}
           <div className="order-1 lg:order-1">
             <ViolinHero />
