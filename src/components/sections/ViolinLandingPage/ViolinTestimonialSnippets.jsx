@@ -64,8 +64,8 @@ const ViolinTestimonialSnippets = () => {
                     </div>
                   </div>
                   <div className="ml-3">
-                    <h4 className="font-semibold">{testimonial.name}</h4>
-                    <p className="text-xs opacity-70">{testimonial.instrument}</p>
+                    <h4 className="font-semibold text-lg">{testimonial.name}</h4>
+                    <p className="text-sm opacity-80">{testimonial.instrument}</p>
                   </div>
                 </div>
                 <p className="italic text-sm">
@@ -73,7 +73,7 @@ const ViolinTestimonialSnippets = () => {
                 </p>
                 <button 
                   onClick={() => toggleTestimonial(testimonial.id)}
-                  className="text-primary text-xs mt-2 hover:underline self-start"
+                  className="text-primary text-md mt-2 hover:underline self-start"
                 >
                   {expandedTestimonials[testimonial.id] ? 'Read less' : 'Read full review'}
                 </button>
@@ -82,7 +82,7 @@ const ViolinTestimonialSnippets = () => {
                     <input key={i} type="radio" className="mask mask-star-2 bg-yellow-400" disabled checked />
                   ))}
                 </div>
-                <p className="text-xs opacity-60 mt-2">— {testimonial.description} • {testimonial.source} • </p>
+                <p className="text-sm opacity-80 mt-2">— {testimonial.description} • {testimonial.source} • </p>
               </div>
             </div>
           ))}

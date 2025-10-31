@@ -20,7 +20,7 @@ export default function Contact() {
         <img
         src="/images/Arco-Melody-Logo(Music-is-Joy-No.1)40x40px.png"
         alt="Arco Melody Logo"
-        className="w-40 h-40 object-contain mb-8"
+        className="hidden w-40 h-40 object-contain mb-8"
         />
         <h1 className="text-center text-5xl font-bold mb-4">Contact Us</h1>
         <ContactForm />

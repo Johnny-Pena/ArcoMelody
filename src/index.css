@@ -1,1 +1,75 @@
 @import "tailwindcss";
+
+/* Typography improvements for better legibility */
+:root {
+  /* base = 16px on small screens, 18px on desktop for easier reading */
+  font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+  :root { 
+    font-size: 18px; 
+  }
+}
+
+/* Make text rendering crisper */
+html { 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+/* Body improvements */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Utility for readable paragraph containers */
+.readable {
+  max-width: 65ch; /* ideal line length for reading */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Better button and input sizing for accessibility */
+.btn {
+  min-height: 44px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.input {
+  min-height: 44px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Improved focus states */
+.btn:focus,
+.input:focus {
+  outline: 2px solid hsl(var(--p));
+  outline-offset: 2px;
+}
+
+/* Better contrast for essential text */
+.opacity-70 {
+  opacity: 0.8;
+}
+
+/* Large text utility for accessibility */
+.large-text {
+  font-size: 1.125em;
+}
+
+.large-text .text-sm {
+  font-size: 1rem;
+}
+
+.large-text .text-base {
+  font-size: 1.125rem;
+}
+
+.large-text .text-lg {
+  font-size: 1.25rem;
+}

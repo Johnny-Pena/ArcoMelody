@@ -40,13 +40,6 @@ export default function ViolinHero() {
               fetchPriority="high"
             />
         </div>
-          
-          {/* Mobile scroll hint */}
-          <div className="block lg:hidden text-center mt-4">
-            <p className="text-sm text-primary font-medium">
-              👇 Get your free trial below!
-            </p>
-          </div>
         </div>
         
       </div>

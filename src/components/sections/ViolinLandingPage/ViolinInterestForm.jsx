@@ -42,7 +42,7 @@ export default function ViolinInterestForm() {
   }
 
   return (
-    <div className="w-full flex justify-center py-8 bg-base-200">
+    <div className="w-full flex justify-center py-2 bg-base-200">
       <div className="card bg-base-100 w-full max-w-md p-6 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-4 text-center">Schedule a FREE Lesson</h2>
         <p className="text-sm opacity-70 mb-6 text-center">

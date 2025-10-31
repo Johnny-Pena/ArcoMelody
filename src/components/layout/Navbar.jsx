@@ -5,16 +5,16 @@ import { HashLink } from "react-router-hash-link";
 export default function Navbar() {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") || "retro";
+      return localStorage.getItem("theme") || "fantasy";
     }
-    return "retro";
+    return "fantasy";
   });
 
   const handleToggle = (e) => {
     if (e.target.checked) {
       setTheme("dracula");
     } else {
-      setTheme("retro");
+      setTheme("fantasy");
     }
   };
 
@@ -22,7 +22,7 @@ export default function Navbar() {
     if (typeof window !== "undefined") {
       localStorage.setItem("theme", theme);
       const localTheme = localStorage.getItem("theme");
-      document.querySelector("html")?.setAttribute("data-theme", localTheme || "retro");
+      document.querySelector("html")?.setAttribute("data-theme", localTheme || "fantasy");
     }
   }, [theme]);
 
@@ -94,7 +94,7 @@ export default function Navbar() {
             />
             <span className="mr-2 ml-2">🌚</span>
           </div>
-          <Link to="/first-lesson" className="btn btn-primary ml-2 mr-5 btn-sm">
+          <Link to="/first-lesson" className="btn btn-primary btn-sm ml-2 mr-5 !min-h-8 !h-8 !text-sm !leading-none !py-1 !px-3">
             📞 Book FREE Trial
           </Link>
         </div>

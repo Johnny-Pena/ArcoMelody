@@ -8,9 +8,9 @@ export default function ViolinTrustBadges() {
           <p className="text-lg opacity-80">Trusted by families across Texas and beyond</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center max-w-4xl mx-auto justify-center">
-          <div className="stat bg-base-100 rounded-lg shadow p-4">
-            <div className="stat-value text-primary">1,000+</div>
-            <div className="stat-title">Students Taught</div>
+          <div className="stat bg-base-100 rounded-lg shadow p-6">
+            <div className="stat-value text-2xl md:text-3xl text-primary">1,000+</div>
+            <div className="stat-title text-base md:text-lg font-medium">Students Taught</div>
             
             {/* responsive desc: stacks on small screens, row on larger */}
             <div className="stat-desc flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
@@ -35,14 +35,14 @@ export default function ViolinTrustBadges() {
               </span>
             </div>
           </div>
-          <div className="stat bg-base-100 rounded-lg shadow">
-            <div className="stat-value text-accent">Suzuki</div>
-            <div className="stat-title">Registered violin teacher</div>
+          <div className="stat bg-base-100 rounded-lg shadow p-6">
+            <div className="stat-value text-2xl md:text-3xl text-accent">Suzuki</div>
+            <div className="stat-title text-base md:text-lg font-medium">Registered violin teacher</div>
           </div>
-          <div className="stat bg-base-100 rounded-lg shadow">
-            <div className="stat-value text-primary">FREE</div>
-            <div className="stat-title">20-Minute Trial</div>
-            <div className="stat-desc">No obligation</div>
+          <div className="stat bg-base-100 rounded-lg shadow p-6">
+            <div className="stat-value text-2xl md:text-3xl text-primary">FREE</div>
+            <div className="stat-title text-base md:text-lg font-medium">20-Minute Trial</div>
+            <div className="stat-desc text-base opacity-80 mt-1">No obligation</div>
           </div>
         </div>
         
@@ -54,22 +54,22 @@ export default function ViolinTrustBadges() {
               <div className="bg-primary text-primary-content rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 1
               </div>
-              <h4 className="text-lg font-semibold mb-2">Book Free Trial</h4>
-              <p className="text-sm opacity-80">Choose your preferred teacher and schedule a 20-minute session</p>
+              <h4 className="text-lg md:text-xl font-semibold mb-2">Book Free Trial</h4>
+              <p className="text-base opacity-80 leading-relaxed">Choose your preferred teacher and schedule a 20-minute session</p>
             </div>
             <div className="text-center">
               <div className="bg-secondary text-secondary-content rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 2
               </div>
-              <h4 className="text-lg font-semibold mb-2">Meet Your Teacher</h4>
-              <p className="text-sm opacity-80">Connect via Zoom and discuss your musical goals</p>
+              <h4 className="text-lg md:text-xl font-semibold mb-2">Meet Your Teacher</h4>
+              <p className="text-base opacity-80 leading-relaxed">Connect via Zoom and discuss your musical goals</p>
             </div>
             <div className="text-center">
               <div className="bg-accent text-accent-content rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 3
               </div>
-              <h4 className="text-lg font-semibold mb-2">Start Learning</h4>
-              <p className="text-sm opacity-80">Begin your personalized lesson plan from home</p>
+              <h4 className="text-lg md:text-xl font-semibold mb-2">Start Learning</h4>
+              <p className="text-base opacity-80 leading-relaxed">Begin your personalized lesson plan from home</p>
             </div>
           </div>
         </div>
