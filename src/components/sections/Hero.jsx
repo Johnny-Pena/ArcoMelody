@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="lg:w-1/3 order-2 lg:order-1 mt-6 lg:mt-0">
           <div className="card bg-base-200 shadow-lg pb-10">
          <figure className="px-6 pt-6">
-<div className="mx-auto w-64 h-64 rounded-full overflow-hidden ring-4 ring-white">
+<div className="mx-auto w-64 h-64 rounded-full overflow-hidden ring-4 ring-base-100">
   <picture>
     <source
       type="image/webp"

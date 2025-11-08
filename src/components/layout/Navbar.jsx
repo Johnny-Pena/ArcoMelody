@@ -5,14 +5,20 @@ import { HashLink } from "react-router-hash-link";
 export default function Navbar() {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") || "fantasy";
+      const savedTheme = localStorage.getItem("theme");
+      // Migrate old "retro" theme to "fantasy"
+      if (savedTheme === "retro") {
+        localStorage.setItem("theme", "fantasy");
+        return "fantasy";
+      }
+      return savedTheme || "fantasy";
     }
     return "fantasy";
   });
 
   const handleToggle = (e) => {
     if (e.target.checked) {
-      setTheme("dracula");
+      setTheme("dim");
     } else {
       setTheme("fantasy");
     }
@@ -52,6 +58,7 @@ export default function Navbar() {
               <li role="menuitem"><Link to="/" className="text-xl font-bold">Home</Link></li>
               <li role="menuitem"><Link to="/lessons" className="text-xl font-bold">Lessons</Link></li>
               <li role="menuitem"><Link to="/violin-lessons" className="text-xl font-bold">Violin Lessons</Link></li>
+              <li role="menuitem"><Link to="/guitar-lessons" className="text-xl font-bold">Guitar Lessons</Link></li>
               <li role="menuitem"><Link to="/teacher-bios" className="text-xl font-bold">Teacher Bios</Link></li>
               <li role="menuitem"><Link to="/core-values" className="text-xl font-bold">Core Values</Link></li>
               <li role="menuitem"><Link to="/testimonials" className="text-xl font-bold">Testimonials</Link></li>
@@ -73,6 +80,7 @@ export default function Navbar() {
           <ul className="menu menu-horizontal px-1 text-sm font-medium sm:text-lg" role="menubar">
             <li role="menuitem"><Link to="/lessons">Lessons</Link></li>
             <li role="menuitem"><Link to="/violin-lessons">Violin Lessons</Link></li>
+            <li role="menuitem"><Link to="/guitar-lessons">Guitar Lessons</Link></li>
             <li role="menuitem"><Link to="/teacher-bios">Teacher Bios</Link></li>
             <li role="menuitem"><Link to="/core-values">Core Values</Link></li>
             <li role="menuitem"><Link to="/testimonials">Testimonials</Link></li>
@@ -89,12 +97,15 @@ export default function Navbar() {
               type="checkbox"
               className="toggle toggle-sm md:toggle-md"
               onChange={handleToggle}
-              checked={theme === "dracula"}
+              checked={theme === "dim"}
               aria-label="Toggle dark mode theme"
             />
             <span className="mr-2 ml-2">🌚</span>
           </div>
-          <Link to="/first-lesson" className="btn btn-primary btn-sm ml-2 mr-5 !min-h-8 !h-8 !text-sm !leading-none !py-1 !px-3">
+          <Link to="/first-lesson" className="btn btn-primary btn-sm ml-3 hidden xl:inline-flex">
+            Free Trial
+          </Link>
+          <Link to="/first-lesson" className="btn btn-primary btn-sm ml-2 mr-5 !min-h-8 !h-8 !text-sm !leading-none !py-1 !px-3 xl:hidden">
             📞 Book FREE Trial
           </Link>
         </div>
