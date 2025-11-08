@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div className="hero bg-base-100 min-h-[80vh] sm:min-h-screen pt-20 sm:pt-24">
+    <div className="hero bg-base-200 min-h-[80vh] sm:min-h-screen pt-20 sm:pt-24">
       <div className="hero-content flex-col lg:flex-row-reverse max-w-6xl mx-auto px-4">
 
         {/* PHOTO CARD (first in DOM for desktop right-side display) */}
         <div className="lg:w-1/3 order-2 lg:order-1 mt-6 lg:mt-0">
           <div className="card bg-base-200 shadow-lg pb-10">
          <figure className="px-6 pt-6">
-<div className="mx-auto w-64 h-64 rounded-full overflow-hidden ring-4 ring-base-100">
+<div className="mx-auto w-64 h-64 rounded-full overflow-hidden ring-8 ring-base-100">
   <picture>
     <source
       type="image/webp"
