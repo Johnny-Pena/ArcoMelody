@@ -20,14 +20,14 @@ export default function ViolinHero() {
 
           {/* Description */}
           <p className="text-base mb-3 lg:text-xl lg:mb-6">
-            Learn violin online with a <strong>Suzuki-registered teacher</strong> who has 15+ years of experience teaching students of all ages.
+            Learn violin online with a <strong>Suzuki-registered teacher</strong> who has 15+ years of experience teaching adult learners and students ages 8 and up.
           </p>
           
           {/* Key Benefits */}
-          <p className="text-sm mb-3 lg:text-base lg:mb-6 opacity-70">
+          <p className="text-sm mb-3 lg:text-base lg:mb-6">
+            ✓ <strong>Adults and Ages 8+ Welcome</strong> <br />
             ✓ <strong>No experience needed</strong> <br />
             ✓ <strong>Flexible scheduling</strong> <br />
-            ✓ <strong>Ages 8+ Welcome</strong>
           </p>
 
                   {/* Instructor Photo */}

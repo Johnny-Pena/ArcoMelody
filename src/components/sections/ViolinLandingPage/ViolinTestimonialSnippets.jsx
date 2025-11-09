@@ -28,7 +28,7 @@ const ViolinTestimonialSnippets = () => {
       id: 2, 
       name: "Aru",
       description: "Violin for 2 years, Maine",
-      instrument: "Son and daughter taking guitar for 11 years",
+      instrument: "Violin for 2 years",
       preview: '"Jenny is a  talented violinist and she is an amazing teacher too."',
       full: '"Jenny is a  talented violinist and she is an amazing teacher too. She can very easily understand what the student needs and help them accordingly. My son and daughter have been taking guitar lessons from Johnny for the past 11 years. Both Johnny and Jenny are very knowledgeable, talented and friendly. I would highly recommend Arco Melody for music lessons."',
       source: "Google review",
