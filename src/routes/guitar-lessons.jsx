@@ -15,7 +15,7 @@ export const meta = () => {
     { name: "keywords", content: "virtual guitar lessons, online guitar teacher, Suzuki method guitar, Johnny Peña guitar teacher, beginner guitar lessons, adult guitar lessons, guitar lessons for kids" },
     { property: "og:title", content: "Virtual Guitar Lessons with Expert Teacher | Free Trial" },
     { property: "og:description", content: "Master the guitar from home with Johnny Peña. Personalized instruction for all ages. Book your FREE trial lesson today!" },
-    { property: "og:image", content: "/images/jenny-downtown-2025-512.webp" },
+    { property: "og:image", content: "/images/johnny-headshot-1024.webp" },
     { property: "og:url", content: "https://arcomelody.com/guitar-lessons" },
     { rel: "canonical", href: "https://arcomelody.com/guitar-lessons" }
   ];
