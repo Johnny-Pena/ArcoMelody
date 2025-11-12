@@ -1,6 +1,6 @@
 export default function ViolinHero() {
   return (
-    <div className="w-full bg-base-100 py-8 lg:py-12">
+    <div className="w-full bg-base-100 pt-8 lg:pt-6 pb-6">
       <div className="w-full max-w-none px-4">
         
         {/* Content Section - Full Width */}
