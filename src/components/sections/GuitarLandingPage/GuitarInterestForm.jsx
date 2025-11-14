@@ -4,6 +4,37 @@ import { useForm, ValidationError } from '@formspree/react';
 export default function GuitarInterestForm() {
   const [state, handleSubmit] = useForm("movyadov");
 
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    
+    // Submit form first, then track conversion to avoid blocking
+    handleSubmit(event);
+    
+    // Track conversion asynchronously without blocking form submission
+    try {
+      if (typeof window !== 'undefined' && 
+          typeof window.gtag === 'function' && 
+          document.readyState === 'complete') {
+        
+        // Use requestAnimationFrame to ensure gtag runs after DOM updates
+        requestAnimationFrame(() => {
+          try {
+            window.gtag('event', 'conversion', {
+              'send_to': 'AW-17649907971/ZSN5CN3c5b8bEIPykOBB',
+              'value': 1.0,
+              'currency': 'USD'
+            });
+            console.log('Google Ads conversion tracked successfully');
+          } catch (gtagError) {
+            console.warn('Google Ads conversion tracking failed:', gtagError);
+          }
+        });
+      }
+    } catch (error) {
+      console.warn('Conversion tracking setup error:', error);
+    }
+  };
+
   if (state.succeeded) {
     return <p className="alert alert-success text-center text-2xl text-white mt-4 font-bold">Thanks! We'll reach out within 24 hours to schedule your lesson. If you need anything sooner, contact us at info@arcomelody.com ✅</p>;
   }
@@ -15,7 +46,7 @@ export default function GuitarInterestForm() {
         <p className="text-sm opacity-70 mb-6 text-center">
           Spots are limited — reserve your FREE lesson and start your musical journey!
         </p>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleFormSubmit}>
           <div className="form-control mb-4">
             <label className="label"><span className="label-text">Full Name*</span></label>
             <input type="text" name="fullName" className="input input-bordered w-full" required />

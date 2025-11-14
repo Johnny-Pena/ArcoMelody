@@ -5,7 +5,7 @@ const GuitarTrustBadges = lazy(() => import("../components/sections/GuitarLandin
 const GuitarHeroWithForm = lazy(() => import("../components/sections/GuitarLandingPage/GuitarHeroWithForm"));
 const GuitarTestimonialSnippets = lazy(() => import("../components/sections/GuitarLandingPage/GuitarTestimonialSnippets"));
 const PricingCard = lazy(() => import("../components/cards/pricingCard"));
-const PhoneCTA = lazy(() => import("../components/sections/GuitarLandingPage/PhoneCTA"));
+const GuitarPhoneCTA = lazy(() => import("../components/sections/GuitarLandingPage/GuitarPhoneCTA"));
 const FAQ = lazy(() => import("../components/FAQ"));
 
 export const meta = () => {
@@ -47,7 +47,7 @@ export default function GuitarLessons() {
 
             {/* Phone CTA for additional lead conversion after pricing */}
             <Suspense fallback={<div className="w-full h-32 animate-pulse bg-base-300 rounded-lg"></div>}>
-                <PhoneCTA />
+                <GuitarPhoneCTA />
             </Suspense>
             
             <Suspense fallback={<div className="w-full h-64 animate-pulse bg-base-300 rounded-lg"></div>}>
