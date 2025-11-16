@@ -27,7 +27,7 @@ export default function GuitarHero() {
           <p className="text-sm mb-3 lg:text-base lg:mb-6">
              ✓ <strong>Adults and Ages 8+ Welcome</strong> <br />
             ✓ <strong>No experience needed</strong> <br />
-            ✓ <strong>Flexible scheduling</strong> <br />
+            ✓ <strong>Electric and Classical Guitar Lessons Available</strong> <br />
           </p>
 
                   {/* Instructor Photo */}
