@@ -12,13 +12,6 @@ export default function LessonsHero() {
             Virtual Music Lessons
           </h1>
           
-          {/* Credential Badges - hidden on mobile, visible on lg+ */}
-          <div className="hidden lg:flex flex-wrap justify-start gap-2 mb-6">
-            <div className="badge badge-info text-lg font-semibold">Deegreed Teachers</div>
-            <div className="badge badge-secondary text-lg font-semibold">30+ Years Combined Teaching Experience</div>
-            <div className="badge badge-success text-lg font-semibold">Flexible Scheduling</div>
-          </div>
-          
 
           {/* Description */}
           <p className="text-base mb-3 lg:text-xl lg:mb-6">
