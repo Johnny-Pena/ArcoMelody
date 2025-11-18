@@ -1,9 +1,10 @@
 import { lazy, Suspense } from "react";
-import InstrumentShowcase from "../components/sections/InstrumentShowcase";
 
 // Lazy load non-critical components to improve initial load time
-const LessonsTitlePage = lazy(() => import("../components/LessonsTitlePage"));
-const WhyVirtualWorks = lazy(() => import("../components/sections/WhyVirtualWorks"));
+const LessonsHeroWithForm = lazy(() => import("../components/sections/LessonsLandingPage/LessonsHeroWithForm"));
+const TrustBadges = lazy(() => import("../components/sections/TrustBadges"));
+const LessonsTestimonialSnippets = lazy(() => import("../components/sections/LessonsLandingPage/LessonsTestimonialSnippets"));
+const LessonsPhoneCTA = lazy(() => import("../components/sections/LessonsLandingPage/LessonsPhoneCTA"));
 const PricingCard = lazy(() => import("../components/cards/pricingCard"));
 const FAQ = lazy(() => import("../components/FAQ"));
 
@@ -24,20 +25,19 @@ export const meta = () => {
   
 export default function Lessons() {
     return (
-        <div className="flex flex-col items-center justify-center bg-base-200 mt-1 px-4 w-full">
-            {/* Enhanced Hero Section */}
-            <div className="hero-section text-center max-w-4xl mx-auto pt-16 pb-8">
-                <h1 className="text-3xl font-bold mb-4 sm:text-5xl">Virtual Music Lessons</h1>
-            </div>
+        <>
+            <div className="flex flex-col items-center justify-center bg-base-200 mt-1 px-4 w-full">
+            <Suspense fallback={<div className="w-full h-48 animate-pulse bg-base-300 rounded-lg mb-4"></div>}>
+                <LessonsHeroWithForm />
+            </Suspense>
             
             <Suspense fallback={<div className="w-full h-48 animate-pulse bg-base-300 rounded-lg mb-4"></div>}>
-                <LessonsTitlePage />
+                <TrustBadges />
             </Suspense>
-            <InstrumentShowcase />
-            
+
             {/* Lazy load below-the-fold components */}
             <Suspense fallback={<div className="w-full h-32 animate-pulse bg-base-300 rounded-lg"></div>}>
-                <WhyVirtualWorks />
+                <LessonsTestimonialSnippets />
             </Suspense>
             
             <div id="pricing-section" className="pt-16">
@@ -45,10 +45,16 @@ export default function Lessons() {
                     <PricingCard />
                 </Suspense>
             </div>
+
+            {/* Phone CTA for additional lead conversion after pricing */}
+            <Suspense fallback={<div className="w-full h-32 animate-pulse bg-base-300 rounded-lg"></div>}>
+                <LessonsPhoneCTA />
+            </Suspense>
             
             <Suspense fallback={<div className="w-full h-64 animate-pulse bg-base-300 rounded-lg"></div>}>
                 <FAQ />
             </Suspense>
         </div>
+        </>
     );
 }

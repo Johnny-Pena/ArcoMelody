@@ -1,0 +1,105 @@
+                         
+import React, { useState } from 'react';
+import LessonsInterestForm from './LessonsInterestForm';
+                         
+const LessonsTestimonialSnippets = () => {
+  const [expandedTestimonials, setExpandedTestimonials] = useState({});
+
+  const toggleTestimonial = (id) => {
+    setExpandedTestimonials(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
+  const testimonials = [
+    {
+      id: 1,
+      name: "Sarah",
+      description: "Parent, Texas",
+      instrument: "Daughter taking violin for 1 year", 
+      preview: '"My daughter LOVES her instructor — improved tremendously in 3 months!"',
+      full: '"My daughter LOVES her instructor. Jenny is such a great teacher and my daughter has improved tremendously in just 3 months of lessons. Would highly recommend!"',
+      source: "Google review",
+      date: "",
+      avatar: "S"
+    },
+    {
+      id: 2, 
+      name: "Aru",
+      description: "Adult student, Maine",
+      instrument: "Violin for 2 years",
+      preview: '"Jenny is a  talented violinist and she is an amazing teacher too."',
+      full: '"Jenny is a  talented violinist and she is an amazing teacher too. She can very easily understand what the student needs and help them accordingly. My son and daughter have been taking guitar lessons from Johnny for the past 11 years. Both Johnny and Jenny are very knowledgeable, talented and friendly. I would highly recommend Arco Melody for music lessons."',
+      source: "Google review",
+      date: "",
+      avatar: "A"
+    },
+    {
+      id: 3,
+      name: "Roberta",
+      description: "Adult student, New York",
+      instrument: "Violin for 2 years",
+      preview: '"Jenny has helped me grow as a musician starting at age 48. I really cannot say enough about her!"',
+      full: '"Jenny has been my violin instructor for the last 2 years and her skills and expertise have really helped me grow as a musician. That is a lot for starting to play a new instrument at age 48. I am 50 now and I take lessons every other week using Google meets and my phone, but a laptop is ideal. I am in New York and she is in Texas, but she always works with me if things come up unexpectedly. I really cannot say enough about her! Thank you for helping me live my dream."',
+      source: "Google review",
+      date: "",
+      avatar: "R"
+    }
+  ];
+
+  return (
+    <div className="py-16 bg-base-100">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12">What Our Students Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.id} className="card bg-base-200 shadow-lg">
+              <div className="card-body">
+                <div className="flex items-center mb-4">
+                  <div className="avatar placeholder hidden">
+                    <div className="bg-primary text-primary-content rounded-full w-12">
+                      <span className="text-xl">{testimonial.avatar}</span>
+                    </div>
+                  </div>
+                  <div className="ml-3">
+                    <h4 className="font-semibold text-lg">{testimonial.name}</h4>
+                    <p className="text-sm opacity-80">{testimonial.instrument}</p>
+                  </div>
+                </div>
+                <p className="italic text-sm">
+                  {expandedTestimonials[testimonial.id] ? testimonial.full : testimonial.preview}
+                </p>
+                <button 
+                  onClick={() => toggleTestimonial(testimonial.id)}
+                  className="text-primary text-md mt-2 hover:underline self-start"
+                >
+                  {expandedTestimonials[testimonial.id] ? 'Read less' : 'Read full review'}
+                </button>
+                <div className="rating rating-sm mt-3">
+                  {[...Array(5)].map((_, i) => (
+                    <input key={i} type="radio" className="mask mask-star-2 bg-yellow-400" disabled checked />
+                  ))}
+                </div>
+                <p className="text-sm opacity-80 mt-2">— {testimonial.description} • {testimonial.source} • </p>
+              </div>
+            </div>
+          ))}
+          
+        </div>
+
+        <div className="text-center mt-12">
+          <h2 className="text-2xl font-bold text-center mb-12">Ready to start your musical journey?</h2>
+
+          <div className="max-w-2xl mx-auto">
+
+            <LessonsInterestForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LessonsTestimonialSnippets;
