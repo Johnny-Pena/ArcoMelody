@@ -2,7 +2,7 @@ import GuitarHero from './GuitarHero';               // your hero content
 import GuitarInterestForm from './GuitarInterestForm'; // modified form (see section 3)
 import GuitarTestimonialSnippet from './GuitarTestimonialSnippet'; // single testimonial
 
-export default function HeroWithForm() {
+export default function GuitarHeroWithForm() {
   return (
     <section className="bg-base-200">
       {/* Outer container: centers content */}
