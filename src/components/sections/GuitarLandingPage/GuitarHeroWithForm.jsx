@@ -19,7 +19,8 @@ export default function GuitarHeroWithForm() {
             {/* The form component should not itself add extra page-level padding — it returns just the card */}
             <div className="w-full max-w-md space-y-4">
               <GuitarInterestForm />
-              <GuitarTestimonialSnippet />        
+              <GuitarTestimonialSnippet />     
+                 
             </div>
           </div>
         </div>
