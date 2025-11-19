@@ -4,10 +4,10 @@ export default function ViolinHero() {
       <div className="w-full max-w-none px-4">
         
         {/* Content Section - Full Width */}
-        <div className="w-full text-center lg:text-left">
+        <div className="w-full text-left lg:text-left">
           {/* Header */}
-          <h1 className="text-2xl font-bold mb-3 lg:text-4xl">
-            Virtual Violin Lessons with Jenny Peña
+          <h1 className="text-2xl font-bold mb-3 text-center lg:text-4xl">
+            Virtual Violin Lessons
           </h1>
           
           {/* Credential Badges - hidden on mobile, visible on lg+ */}
