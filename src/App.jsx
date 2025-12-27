@@ -18,6 +18,10 @@ import FirstLessonPage from './routes/firstlesson.jsx';
 import ViolinLessons from './routes/violin-lessons.jsx';
 import PrivacyPolicy from './routes/privacy-policy.jsx';
 import GuitarLessons from './routes/guitar-lessons.jsx';
+import OneHourWeeklyPage from './routes/one-hour-weekly.jsx';
+import OneHourBiWeeklyPage from './routes/one-hour-biweekly.jsx';
+import HalfHourWeeklyPage from './routes/half-hour-weekly.jsx';
+import HalfHourBiWeeklyPage from './routes/half-hour-biweekly.jsx';
 
 function App() {
   return (
@@ -40,6 +44,10 @@ function App() {
       <Route path="/violin-lessons" element={<ViolinLessons />} />
       <Route path="/guitar-lessons" element={<GuitarLessons />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/one-hour-weekly" element={<OneHourWeeklyPage />} />
+      <Route path="/one-hour-biweekly" element={<OneHourBiWeeklyPage />} />
+      <Route path="/half-hour-weekly" element={<HalfHourWeeklyPage />} />
+      <Route path="/half-hour-biweekly" element={<HalfHourBiWeeklyPage />} />
     </Routes>
     <Footer />
   </div>
