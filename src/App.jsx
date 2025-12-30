@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import './App.css';
 import './index.css';
 import Navbar from './components/layout/Navbar.jsx';
@@ -23,10 +24,21 @@ import OneHourBiWeeklyPage from './routes/one-hour-biweekly.jsx';
 import HalfHourWeeklyPage from './routes/half-hour-weekly.jsx';
 import HalfHourBiWeeklyPage from './routes/half-hour-biweekly.jsx';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
 <Router>
   <div>
+  <ScrollToTop />
   <AnalyticsTracker />
     {/* <MetaPixel /> */}
     <Navbar />
