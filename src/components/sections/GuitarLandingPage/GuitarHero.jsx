@@ -19,7 +19,7 @@ export default function GuitarHero() {
           
 
           {/* Description */}
-          <p className="text-base mb-3 lg:text-xl lg:mb-6">
+          <p className="hidden lg:block text-base mb-3 lg:text-xl lg:mb-6">
             Learn guitar online with a <strong>Master of Music degree holder</strong> who has 15+ years of experience teaching adult learners and students ages 8 and up.
           </p>
           
