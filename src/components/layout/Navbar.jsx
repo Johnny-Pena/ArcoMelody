@@ -3,34 +3,34 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 export default function Navbar() {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme");
-      // Migrate old "retro" theme to "fantasy"
-      if (savedTheme === "retro") {
-        localStorage.setItem("theme", "fantasy");
-        return "fantasy";
-      }
-      return savedTheme || "fantasy";
-    }
-    return "fantasy";
-  });
+  // Theme toggle functionality commented out - using fantasy theme by default
+  // const [theme, setTheme] = useState(() => {
+  //   if (typeof window !== "undefined") {
+  //     const savedTheme = localStorage.getItem("theme");
+  //     // Migrate old "retro" theme to "fantasy"
+  //     if (savedTheme === "retro") {
+  //       localStorage.setItem("theme", "fantasy");
+  //       return "fantasy";
+  //     }
+  //     return savedTheme || "fantasy";
+  //   }
+  //   return "fantasy";
+  // });
 
-  const handleToggle = (e) => {
-    if (e.target.checked) {
-      setTheme("dim");
-    } else {
-      setTheme("fantasy");
-    }
-  };
+  // const handleToggle = (e) => {
+  //   if (e.target.checked) {
+  //     setTheme("dim");
+  //   } else {
+  //     setTheme("fantasy");
+  //   }
+  // };
 
+  // Set default fantasy theme
   useEffect(() => {
     if (typeof window !== "undefined") {
-      localStorage.setItem("theme", theme);
-      const localTheme = localStorage.getItem("theme");
-      document.querySelector("html")?.setAttribute("data-theme", localTheme || "fantasy");
+      document.querySelector("html")?.setAttribute("data-theme", "fantasy");
     }
-  }, [theme]);
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-base-300 z-50">
@@ -73,7 +73,7 @@ export default function Navbar() {
           className="w-6 h-6 sm:w-7 h-7"
           style={{ display: "inline-block" }}
         />
-        <span className="hidden sm:inline">Arco Melody</span>
+        <span className="sm:inline">Arco Melody</span>
       </Link>
         </div>
         <div className="navbar-center hidden xl:flex">
@@ -91,7 +91,8 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="navbar-end">
-          <div className="flex items-center">
+          {/* Theme toggle commented out - using fantasy theme by default */}
+          {/* <div className="flex items-center">
             <span className="ml-2 mr-2">🌞</span>
             <input
               type="checkbox"
@@ -101,7 +102,7 @@ export default function Navbar() {
               aria-label="Toggle dark mode theme"
             />
             <span className="mr-2 ml-2">🌚</span>
-          </div>
+          </div> */}
           <Link to="/first-lesson" className="btn btn-primary btn-sm ml-3 hidden xl:inline-flex">
             Free Trial
           </Link>
